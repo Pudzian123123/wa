@@ -1,5 +1,5 @@
 module.exports = async (client,message) => {
-  let prefix = "-";
+  let prefix = "+";
 
   // Avoid bot commands
 

@@ -21,4 +21,4 @@ client.categories = fs.readdirSync("./commands/");
 
 });
 
-client.login("TOKEN");
+client.login("NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0");
