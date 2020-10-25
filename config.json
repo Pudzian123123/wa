@@ -1,8 +1,8 @@
 {
-	"prefix": "!",
-	"token": "your-token-goes-here",
-	"owner": "your-discord-id",
-	"botID": "bot-id",
+	"prefix": "/",
+	"token": "NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0",
+	"owner": "408791091060539402",
+	"botID": "767516970769055745",
 	"color": {
 		"red": "#E44236",
 		"blue": "#0A79DF",
