@@ -1,31 +1,23 @@
-# ModeratorBot_BETA Discord.js[V12]
-A moderation bot for now with 3 commands 
-- **kick** 
-- **ban** 
-- **unban**
+# Welcome to my GitHub repository.
+  <p align="center">
+    <a href="https://jetbrains.com/?from=ChinoKafuu">
+    <img src="https://img.shields.io/badge/Powered_by_WebStorm-gray.svg?logo=webstorm&style=for-the-badge" />
+  </a>
+  <a href="https://crowdin.com/">
+    <img src="https://img.shields.io/badge/Powered_by_Crowdin-gray.svg?logo=crowdin&style=for-the-badge" />
+  </a>
+  </p>
 
-The bot is in beta, which means it will gradually improve.
+## Hello! My name is Chino Kafuu, and I'm just another simple Discord bot originally created by DanielaGC_.
+### Well... as you can see, I'm a bot with many features like fun, ~~music~~, moderation and utility.
+#### You can discover my commands using *k.help*, and if you are experiencing issues with them please join my [support server](https://discord.gg/CAm9cSU).
 
-# Command features:
-- When trying to sanction yourself the bot will send an embed with an error
-- If you did not write a reason for the sanction, the bot will send you an embed with an error
-- If the person who is executing the command or the bot does not have permissions, the bot will send an embed with an error
-- When sanctioning a user, it will send an embed with the following text "**{user} has been successfully banned.**"
+## Self-hosted instances
+As Chino has grown over the time, the repository became open, meaning everyone can see the source code, open issues, etc, and as you may expect, copies were created.
+For that reason, we are **NOT** providing any kind of support for unoriginal self-hosted instances in our support server. It's all on your own.
 
-# Bot features:
-- It is made with commandhandler
-- It has a default prefix "**-**"
-- Ignore all bot commands
-- Ignore DM commands or messages
+# See you! And have fun using me.
 
-# To-do list:
-- [ ] Mute & unmute command ([#3](https://github.com/AllanGame/ModeratorBOT-Discord.js-V12-/issues/3/))
-- [ ] Auto mod
-- [ ] Filter bad words
-- [ ] Permissions
-- [ ] Chat modes
-- [ ] More moderation commands
 
-I have not had time to update much of this bot but I will try to update it more later :)
-   
 
+![Chino Kafuu](https://repository-images.githubusercontent.com/203506793/08e09480-db3b-11e9-8daa-175b74a05b92)
