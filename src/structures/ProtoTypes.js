@@ -1,15 +1,14 @@
-const { Message } = require("discord.js")
+
 const emotes = require("./emotes")
 const { CanvasRenderingContext2D, createCanvas } = require("canvas")
 module.exports = class ProtoTypes {
 	static start() {
-		Message.prototype.chinoReply = async function send(emoji, message, ...args) {
+
 
 			emoji = emotes[emoji]
 			return this.channel.send(`${emoji ? emoji : "🐛"} **|** ${this.author}, ${message}`, ...args)
 		}
 
-		CanvasRenderingContext2D.prototype.roundRect = function roundRect(x, y, width, height, radius, fill, stroke) {
 			if (typeof stroke === "undefined") {
 				stroke = true
 			}
