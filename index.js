@@ -1,44 +1,44 @@
+/* eslint-disable brace-style */
+// require the discord.js commando module
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
-const fs = require('fs');
-const discord_token = (process.env.TOKEN);
-const server_invite = (process.env.INVITE_URL);
-const owner_id = (process.env.OWNER_ID);
-const prefix = (process.env.PREFIX);
-require('dotenv').config();
+
+// config file required to run the bot
+const { prefix, token, owner, botID } = require('./config.json');
+
+// create a new Discord client
 const client = new CommandoClient({
-    commandPrefix: prefix,
-    unknownCommandResponse: false,
-    disableMentions: 'everyone',
-    owner: owner_id,
-    invite: server_invite
-})
-
-client.registry
-    .registerDefaultTypes()
-    .registerGroups([
-        ['admin', 'Administration'],
-        ['mod', 'Moderation'],
-        ['fun', 'Fun'],
-        ['misc', 'Miscellanious'],
-        ['util', 'Utility']
-
-    ])
-    .registerDefaultGroups()
-    .registerDefaultCommands()
-    .registerCommandsIn(path.join(__dirname, 'commands'))
-
-
-fs.readdir('./events/', (err, files) => {
-    if (err) return console.error;
-    files.forEach(file => {
-        if (!file.endsWith('.js')) return;
-        const evt = require(`./events/${file}`);
-        let evtName = file.split('.')[0];
-        console.log(`Loaded event '${evtName}'`);
-        client.on(evtName, evt.bind(null, client));
-    });
+	commandPrefix: prefix,
+	disableEveryone: true,
+	owner: owner,
 });
 
-client.on('error', console.error)
-client.login('NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0');
+client.registry
+	.registerDefaultTypes()
+	.registerGroups([
+		['moderation', 'Moderation commands to administer your server'],
+		['misc', 'A bunch of miscellaneous commands for info and fun'],
+	])
+	.registerDefaultGroups()
+	.registerDefaultCommands()
+	.registerCommandsIn(path.join(__dirname, 'commands'));
+
+// when the client is ready, run this code
+// this event will only trigger one time after logging in
+client.once('ready', async () => {
+	console.log(`Logged in as ${client.user.tag}!`);
+	client.user.setActivity(`${client.guilds.size} guilds | ${prefix}help`, { type: 'WATCHING' });
+});
+
+client.on('message', async message =>{
+	if(message.author.bot) { return; }
+	if(message.content === `<@${botID}>`) {
+		message.channel.send(`My prefix in this server is \`\`${prefix}\`\`. To learn how to use the bot, use the \`\`${prefix}help\`\` command.`);
+	}
+	if(!message.content.startsWith(prefix)) { return; }
+});
+
+client.on('error', console.error);
+
+// login to Discord with your app's token
+client.login(token);
