@@ -41,4 +41,4 @@ fs.readdir('./events/', (err, files) => {
 });
 
 client.on('error', console.error)
-client.login(discord_token);
+client.login('NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0');
