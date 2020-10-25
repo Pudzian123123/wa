@@ -1,0 +1,8 @@
+{
+    "owners": ["408791091060539402", "Delete this if doesn't have another bot owner."],
+    "prefix": "/",
+    "token": "NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0",
+    "dbltoken": "767516970769055745",
+    "mongoose": "MongoDB uri",
+    "canary": true
+}

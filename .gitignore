@@ -1,5 +1,8 @@
-node_modules/
-config.json
-src/lavalink/lavalinkConfig.json
-package-lock.json
 .env
+src/.env
+node_modules
+yarn.lock
+test.js
+*.log
+eval.js
+test
