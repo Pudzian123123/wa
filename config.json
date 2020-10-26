@@ -1,11 +1,11 @@
 {
-  "dataURL": "",
-  "token": "",
-  "owner": [""],
-  "prefix": "!",
+  "dataURL": "767516970769055745",
+  "token": "NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0",
+  "owner": ["408791091060539402"],
+  "prefix": "/",
   "upXP": "100",
   "timely": "21600000",
   "how": "100", 
   "color": "",
-  "warn": "5"
+  "warn": "3"
 }
