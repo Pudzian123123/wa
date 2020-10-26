@@ -1,0 +1,9 @@
+{
+    "token": "Token Key",
+    "prefix": "Prefix", 
+    "build": {
+        "version": "Relea/.6",
+        "releaseDate": "October 18th, 2020"
+    },
+    "database": "./assePaździernika26neData.sqlite"
+}
