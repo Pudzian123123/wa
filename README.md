@@ -1,198 +1,125 @@
-[ <img src="https://media.discordapp.net/attachments/732211790804680814/756420126621958174/1200px-Flag_of_Russia.svg.png?width=651&height=434" wight="10px" height="10px"> Russian Guide ](https://github.com/perssBest/MongoDB-bot#ru-discord-bot-with-mongodb) / [ <img src="https://media.discordapp.net/attachments/732211790804680814/756420126814896178/the-united-states-flag-icon-free-download.jpg?width=825&height=434" wight="10px" height="10px"> English Guide ](https://github.com/perssBest/MongoDB-bot#en-discord-bot-with-mongodb)
+# [ ru ] Как начать пользоваться данной сборкой?
 
-<br><br>
+> Данная сборка первой версии, соответственно в ней присутствуют баги. В следующий версиях они будут исправлены. Заходите на наш [дискорд сервер](https://discord.gg/FcNPVK5), чтобы указать нам нашедший Вами баг.
 
-<div align="center">
-  <img src="https://media.discordapp.net/attachments/732211790804680814/756417495296114748/reminder_1.png?width=868&height=434" />
-  <br>
-</div>
+- Все очень просто, для начала давайте скачаем архив с файлами (это можно сделать нажав на [меня](https://github.com/perssBest/MySql-bot/archive/master.zip))
 
-<hr>
+- Для работы со сборкой нам понадобятся некоторые вещи:  
++ 1. Необходимо установить [nodejs (официальный сайт)](https://nodejs.org/en/)
++ 2. После установки нам необходимо зарегистрироваться на сайте [mysql](https://remotemysql.com/login.php)
++ 3. После регистрации заходим в вкладку **DATABASES**
++ 4. Находим кнопку **CREATE NEW DATABASE**
++ 5. Записываем пароли, и другие данные в блокнот (на всякий случай, в дальнейшим у Вас могут возникнуть с этим проблемы.)
 
-# [ru] Discord бот с использованием Mongodb
+- Разархивируем архив в перекидываем его в убодное вам место. Открываете редактор кода ([Atom](https://atom.io), 
+[Visual Studio Code](https://code.visualstudio.com)) и заходите в проект.
 
-- Хеллоу! Вот и очередной туториал, в котором вы научитесь пользоваться базой данных mongodb.
+- Открываем файл под названием **config.json** и подстраиваем все настройки под себя.
 
-- Для начало давайте скачаем проект(это можно сделать нажав на [меня *ня ;3*](https://github.com/perssBest/MongoDB-bot/archive/master.zip))
+- Далее давайте разберемся с базой данных. После того как вы создали ее, Вы сможете увидеть базу, рядом будет кнопка **ACTION**. Нажимаем на нее и после у нас появляются новые кнопки, нам необходима только одна: ***PHPMyAdmin***.
 
-- Далее нам надо создать сервер. Это самый долгий этап. Так что заваривайте чаек и садитесь за компьютер :3
+- После, мы должны войти либо зарегистрироваться, с помощью тех данных, которые вам дали при регистрации базы данных.
 
-- Если у вас возникли какие-либо вопросы/проблемы заходите на наш Discord Server --> https://discord.gg/RPb2KXN
+- В строку "Пользователь" вставляете "Username", а в строку "Пароль", пароль от базы (тот который был выдан при регистрации самой базы данных MySQL)
 
-- Заходи на офф. сайт монгоДБ. [Регистрируемся](https://account.mongodb.com/account/register) или [Входим](https://account.mongodb.com/account/login) в аккаунт.
+- После успешного входа создаем новую табличку 
+![Пример](https://cdn.discordapp.com/attachments/653197646823030824/669801093554896916/unknown.png)
 
-- После регистрации, вас перекинет на другую страничку. Вам необходимо нажать на зеленую кнопку, после в открывщимся окне написать название вашего проекта(не важно что вы напишете, это не будет влиять на работу.) Нажимаем на зеленую кнопку. Примеры:
+- В появившимся окне выставляем такие же значения как на скриншоте.
+![Скриншот](https://cdn.discordapp.com/attachments/653197646823030824/669802183805501450/unknown.png)
 
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353659650768939/IMG_20200309_035249.png)
+- Остальные значения не трогаем! Сохраняем таблицу кнопкой "Сохранить".
 
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353659331870865/IMG_20200309_035651.png)
+- Нам понадобиться еще одна таблица для экономики бота. Скриншот как создавать след таблицу ниже:
+![Скриншот](https://cdn.discordapp.com/attachments/653197646823030824/669804760400003072/unknown.png)
 
-- После, вас попросит ввести **Add Members and Set Permissions**. На данном этапе можете просто простустить, наваж на зеленую кнопку(это нее играет никакой роли.)
+- Также в стоблике **money, xp, lvl** можете поставить значние **30000**. Это сделает ограничение в 30.000 монет и т.д.
 
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353658962640904/IMG_20200309_035747.png)
+- Сохранием столбики. Остальные элементы тоже не трогаем.
 
-- И так, мы создали наш проект, теперь давайте создадим "кластер". Нажимаем на кнопку **Build a Cluster**, далее в открывшимся окне просто нажимаем зеленую кнопку **Create cluster**(Так же по своему желанию можете сменить название кластера, по умолчанию он "Cluster0").
+> **Фух. Сложное уже позади. Напоминаю, что в config.json необходимо вставить данные от созданной Вами базы данных.**
 
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353658648199200/IMG_20200309_035819.png)
+- Для установки модулей нам понадобиться **yarn**. Если же у вас его нету можете использовать обычный **npm**
 
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353658299809807/IMG_20200309_035851.png)
-
-- После того как вы нажали на кнопку **Create cluster**. Вам стоит подождать 1-3 минут.
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627912208447/IMG_20200309_035925.png)
-
-- После того как наш кластер создался, вы увидете данную картину:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627736178702/IMG_20200309_040013.png)
-
-- Окей! Пол дела сделано. Далее переходим во вкладку **Database Access**. Скриншот:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627509817527/IMG_20200309_040207.png)
-
-- После перехода в данную вкладку, мы видем зеленую кнопку, с надписью **ADD NEW USER**, в открывшимся окне выставляем права "Atlas Admin". После пишите ваше имя и желаемый пароль(стоит понимать что, через эти данные вы будете входить в базу-данных. Так что запишите ваш пароль на листок или блокнот.) Сохранияем! Скриншот:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627320680467/IMG_20200309_040424.png)
-
-- Теперь. Идем во вкладку **Network Access**.
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353626209452081/IMG_20200309_042002.png)
-
-- Видим зеленую кнопку с надписью ***ADD IP ADDRESS***, тыкаем. В открывшимся окне, в строке "**Whitelist Entry**", пишем значение ***0.0.0.0/0***. Коментарий не обязателен. Сохраняем.
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627106902047/IMG_20200309_040548.png)
-
-<br><br><br><br>
-
-- [🎉] Поздравляю! Мы создали базу, теперь нам необходима ссылка чтоб подкючиться к базе. Для этого опять идем во вкладку **Clusters**
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353626029228097/IMG_20200309_042035.png)
-
-- Видим наш недавно созданный кластер. Находим кнопку с надписью ***CONNECT***, жмякаем. У вас открывается окно, нажимаете второй раздел("Connect Your Application"). После вы увидете кнопку ***copy***(данную ссылку нельзя показывать людям. Если они узнают название и пароль от бд, то смогут управлять вашей базой-данных.). Копируем ссылку и вставляем в наш код. config.json --> dataURL
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353626758905877/IMG_20200309_041447.png)
-
-- Так же вместо `<password>` пишем свой пароль который вы указали во вкладке **Database Access**, создавая нового юзера.
-
-
-- Необходимые пакеты для работы бота:
 ```
-- discord.js(основа)
-- mongoose(база)
-- ms(время)
-- fs(чтение файлов)
+Установка: yarn add <module>
+
+Установка: npm install/i <module>
 ```
 
-- ***Установка пакетов:***
-```bash
-$ npm i
+- Запускаем файл `starting.bat`. Если у вас бот находится в оффлайне или есть какие-то другие проблемы заходите на наш [дискорд сервер](https://discord.gg/FcNPVK5) и попросите помощи. Будем вам рады помочь!
 
-$ yarn add
+> **Не рекомендую устанавливать данную сборку на Glitch, Wix, Repl.it и т.п. хосты. Оптимальный хост будет Heroku, да и проблем в дальнейшим с ним будет поменьше.**
+
+
+
+
+# [ en ] How to start using this assembly?
+
+> This assembly is the first version, respectively, it contains bugs. In future versions they will be fixed. Visit our [discord server](https://discord.gg/FcNPVK5) to indicate to us the bug that you found
+
+- Everything is very simple, for a start let's download the archive with files (this can be done by clicking on [me](https://github.com/perssBest/MySql-bot/archive/master.zip))
+
+- To work with the assembly, we need some things.
+1) You need to install [nodejs(official site)](https://nodejs.org/en/)
+2) After installation, we need to register on the site [mysql](https://remotemysql.com/login.php)
+3) After registration, go to the tab **DATABASES**
+4) Find the button **CREATE NEW DATABASE**
+5) We write down passwords and other data in a notepad(just in case, in the future you may have problems with this.)
+
+- “Unzip the archive in throwing it to a place that suits you.” Open the code editor([Atom](https://atom.io), 
+[Visual Studio Code](https://code.visualstudio.com)) go into the project.
+
+- Open **config.json** and adjust everything for yourself.
+
+- Next, let's deal with the database. After you created it, you can twist the base, the **ACTION** button will be next to it, click on it and after we have new buttons, we only need one: ***MyPHPAdmin***.
+
+- After, we must log in using the data that you were given when registering the database.
+
+- In the line "User" insert "Username", in the line "Password", the password from the database (the one that was issued when registering the database itself)
+
+- After a successful login, create a new plate
+![Example](https://cdn.discordapp.com/attachments/653197646823030824/669801093554896916/unknown.png)
+
+- In the window that appears, set the same values as in the screenshot.
+![Screenshot](https://cdn.discordapp.com/attachments/653197646823030824/669802183805501450/unknown.png)
+
+- Do not touch the remaining values! Save the table with the "Save" button
+
+“We need another table.” For Bot Economy. Screenshot of how to create a trace of the table below:
+![Screenshot](https://cdn.discordapp.com/attachments/653197646823030824/669804760400003072/unknown.png)
+
+- Also in stoblik **money, xp, lvl** you can put significant **30000**. This will make a limit of 30.000 coins and so on.
+
+- Save the columns. The remaining elements are also not touched.
+
+> **Fuh. It’s hard already. I understand that in config.json you need to insert data from the created database.**
+
+- To install the modules we need **yarn**. If you don’t have one, you can use regular **npm**
+
+```
+Installation: yarn add <module>
+
+Installation: npm install (i) <module>
 ```
 
-- Далее просто запускаем бота командой: **node .**
+- We start starting.bat. If your bot is offline or if you have any other problems, go to our [discord server](https://discord.gg/FcNPVK5) and ask for help. We will be glad to see you!
 
-- Если у вас возникли какие-либо вопросы/проблемы заходите на наш Discord Server --> https://discord.gg/RPb2KXN
+> **I do not recommend installing this assembly on glitch, wix, repl.it. The optimal host will be Heroku, and there will be less problems with it later.**
 
-## Будте добры поставьте ⭐️ на наш репозиторий!
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div align="center">
-  <img src="https://media.discordapp.net/attachments/732211790804680814/756416506870628372/reminder.png?width=868&height=434" />
-  <br>
-</div>
-
-<hr>
-
-# [en] Discord Bot with MongoDB
-
-- Hello! Here is another tutorial in which you will learn how to use the mongodb database.
-
-- First, let's download the project (you can do this by clicking on [me *nya ;3*](https://github.com/perssBest/MongoDB-bot/archive/master.zip))
-
-- Next, we need to create a server. This is the longest stage. So make some tea and sit down at the computer: 3
-
-- If you have any questions/problems go to our Discord Server -> https://discord.gg/RPb2KXN
-
-- Come on official MongoDB website. [Register](https://account.mongodb.com/account/register) or [Login](https://account.mongodb.com/account/login) into your account.
-
-- After registration, you will be transferred to another page. You need to click on the green button, then write the name of your project in the window that opens (no matter what you write, this will not affect the work.) Click on the green button. Examples:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353659650768939/IMG_20200309_035249.png)
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353659331870865/IMG_20200309_035651.png)
-
-- После, вас попросит ввести **Add Members and Set Permissions**. На данном этапе можете просто простустить, наваж на зеленую кнопку(это нее играет никакой роли.)
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353658962640904/IMG_20200309_035747.png)
-
-- And so, we have created our project, now let's create a "cluster". Click on the **Build a Cluster** button, then in the window that opens, simply click the green **Create cluster** button (You can also change the name of the cluster if you wish, by default it is "Cluster0")
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353658648199200/IMG_20200309_035819.png)
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353658299809807/IMG_20200309_035851.png)
-
-- After you clicked on the **Create cluster** button. You should wait 1-3 minutes.
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627912208447/IMG_20200309_035925.png)
-
-- After our cluster has been created, you will see this picture:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627736178702/IMG_20200309_040013.png)
-
-- Okay! The floor is done. Next, go to the **Database Access** tab. Screenshot:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627509817527/IMG_20200309_040207.png)
-
-- After switching to this tab, we see a green button with the inscription **ADD NEW USER**, in the window that opens, set the rights "Atlas Admin". Then write your name and the desired password (it is worthwhile to understand that through these data you will enter the database. So write down your password on a piece of paper or notebook.) Save! Screenshot:
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627320680467/IMG_20200309_040424.png)
-
-- Now. Go to the **Network Access** tab.
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353626209452081/IMG_20200309_042002.png)
-
-- We see a green button with the inscription ***ADD IP ADDRESS***, poke. In the window that opens, in the line "**Whitelist Entry**", write the value ***0.0.0.0/0***. A comment is optional. We save.
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353627106902047/IMG_20200309_040548.png)
-
-<br><br><br><br>
-
-- [🎉] Congratulations! We have created a base, now we need a link to connect to the base. To do this, again go to the **Clusters** tab
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353626029228097/IMG_20200309_042035.png)
-
-
-- We see our newly created cluster. We find a button labeled ***CONNECT***, press it. A window opens, click the second section ("Connect Your Application"). After that you will see the ***copy*** button (this link cannot be shown to people. If they find out the name and password from the database, they will be able to manage your database.). Copy the link and paste it into our code. config.json -> dataURL
-
-![](https://cdn.discordapp.com/attachments/667072123914813444/686353626758905877/IMG_20200309_041447.png)
-
-- Also, instead of `<password>`, write your password that you specified in the **Database Access** tab, creating a new user.
-
-Required packages for the bot to work:
+## **Готовая база-данных. Ready database.** 
 ```
-- discord.js(base)
-- mongoose(database)
-- ms(time)
-- fs(read files)
+  "host": "remotemysql.com",
+  "user": "h4wBbXM10s",
+  "password": "g7XNHBUCSg",
+  "database": "h4wBbXM10s",
+  "port": "3306"
 ```
 
-- ***Install packages:***
-```bash
-$ npm i
+### **Огромное спасибо этим людям за поддержку и помощь: | Many thanks to these people for their support and help:**
 
-$ yarn add
-```
+[x] [komunre#2298](https://github.com/komunre)
 
-- Then just start the bot with the command: **node .**
+[x] manul#8612 
 
-- If you have any questions / problems go to our Discord Server -> https://discord.gg/RPb2KXN
-
-_Translation may not be correct, sorry :c_
-
-## Please put ⭐️ on our repository!
+[x] [Milkiy#0001](https://github.com/FletcherShiro)

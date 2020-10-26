@@ -1,25 +1,22 @@
 {
-  "name": "simple-mongoDB-bot",
-  "version": "0.0.1",
-  "description": "https://github.com/perssBest/MongoDB-bot",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "name": "MySqlProject",
+  "version": "1.0.0",
+  "description": "Beginner build for beginner coders.",
+  "main": "index.js",
+
   "dependencies": {
-    "discord.js": "*",
-    "mongoose": "*",
-    "fs": "*",
-    "ms": "*"
+    "discord.js": "",
+    "fs": "",
+    "mysql": ""
   },
+
   "engines": {
-    "node": "12.x"
+    "node": "10.x"
   },
+
   "repository": {
-    "url": "https://github.com/perssBest/MongoDB-bot"
+    "url": "https://github.com/perssBest/MySql-bot"
   },
-  "license": "MIT",
-  "keywords": [
-    "node"
-  ]
+
+  "license": "MIT"
 }
