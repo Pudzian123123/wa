@@ -1,57 +1,16 @@
-# Super advanced discord bot ![alt text](https://i.imgflip.com/xu2ct.jpg)
+If you wish to add the bot to your own server, [**click here!**](https://discordapp.com/api/oauth2/authorize?client_id=694637394300895273&permissions=8&scope=bot)
 
-![Issues](https://img.shields.io/github/issues/cramenorn/raptorsa.svg)
-![Stars](https://img.shields.io/github/stars/cramenorn/raptorsa.svg)
-![Forks](https://img.shields.io/github/forks/cramenorn/raptorsa.svg)
-[![Build Status](https://dev.azure.com/davidedlc97/RaptorSA/_apis/build/status/Cramenorn.RaptorSA?branchName=master)](https://dev.azure.com/davidedlc97/RaptorSA/_build/latest?definitionId=1&branchName=master)
+### RoboLiam is a bot with all the tools you need to moderate a server along with tons of commands to keep your community entertained!
 
-**RaptorSA** is a multi function bot, you can listen music, manage roles, get various informations and many other things. This Discord bot can be helpful for anyone who wants to learn how to make a discord.js bot, every command has it's own folder so it's more easy to read the entire project. I made this so new users can also look at the methods used for certain commands and get some ideas for their Discord bot.
+![RoboLiam Banner](https://repository-images.githubusercontent.com/252278043/e73c6000-742f-11ea-9bb2-3744210750be)
 
-# Contributing
+# How do I use this thing?
+The default prefix is `.`, however you can easily change the prefix with `.prefix [new prefix]`. If you forget the prefix, just `@mention` RoboLiam and you'll get the server prefix. To see the commands, say `.help` or if you'd like, you can say `.cmds`! Many of RoboLiam's commands have aliases so you don't have to step out of your confort zone!
 
-If you want help, don't worry, there are many ways to do it:
+# I found a bug!
+If you come across a bug or need support in general, [join the support server](https://discord.gg/QFMjF2j). An invite to the support server is listed above.
 
-* **Contribute with code**: Setup a development environment, make some changes, and [open a pull request](https://github.com/Cramenorn/RaptorSA/pulls).
+# I've got an idea!
+You have an idea for a new command or feature? GREAT! Similair to if you find a bug, [join the support server](https://discord.gg/QFMjF2j) and tell the developers! We'd be more than happy to listen to what you have to say.
 
-* **Contribute with ideas**: Have a great idea, but don't know how to code ? No problem! Open an issue so we can talk about your idea.
-
-## Branching
-
-New Pull Requests should be made upon the **testing** branch. If the code does not have any particular issues, then it will be merged into **master** branch.
-
-## Common Issues & Resolutions
-
-Please see the [Common Issues](https://github.com/Cramenorn/RaptorSA/wiki/Common-Issues) page before posting an issue.
-
-# Api keys and tokens
-
-Some commands require an **Api Key** or a **Token** which can be find on these websites: 
-
-* [Google Custom Search Api Key and CX](https://developers.google.com/custom-search/)
-* [Riot Games Developer](https://developer.riotgames.com/)
-* [Discord Developer to get the token for the bot](https://discordapp.com/developers/applications/)
-
-# What do I need to make the bot work ?
-
-See the [installation](https://github.com/Cramenorn/RaptorSA/wiki/Installation) page.
-
-# CI/CD with Azure Pipelines
-
-## Do I need to use the Azure Pipelines ?
-
-No you don't, you can delete the **azure-pipelines.yml** file if you do not need it or you want to use another pipeline.
-
-## If I want to use the Azure Pipelines, what do I need to do ?
-
-* Create a repo on **Azure Devops**.
-* [Create a pipeline and connect Azure Devops to Github](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=javascript%2Cyaml%2Cbrowser%2Ctfs-2018-2)
-* Copy the pipeline YAML code from the **azure-pipelines.yml** file, and paste it into the YAML editor for your new pipeline on Azure Devops.
-* Save and run the pipeline.
-
-# Commands
-
-See the [Commands](https://github.com/Cramenorn/RaptorSA/wiki/Commands) page.
-
-# Built with
-* [Discord.js](https://discord.js.org/#/)
-* [Node js](https://nodejs.org/en/)
+###### Credit to [Noba](https://www.reddit.com/user/N0ba/) on Reddit for the Protogen Avatar.

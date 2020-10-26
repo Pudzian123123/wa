@@ -1,77 +1,155 @@
-const Discord = require('discord.js');
-const config = require("./jsonFiles/config.json");
-const Enmap = require("enmap");
+require("dotenv").config();
+const fs = require("fs");
+const request = require("request");
+const cheerio = require("cheerio");
+const fetch = require("node-fetch");
+// const DBL = require("dblapi.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
-const fs = require('fs');
+// const dbl = new DBL(process.env.DBL_TOKEN, client);
 
-client.config = config;
+let prefix = ".";
 
-fs.readdir("./events/", (err, files) => {
-    if (err) return console.error(err);
-    files.forEach(file => {
-      const event = require(`./events/${file}`);
-      let eventName = file.split(".")[0];
-      client.on(eventName, event.bind(null, client));
+// Firebase
+const firebase = require("firebase/app");
+const admin = require("firebase-admin");
+admin.initializeApp({
+  credential: admin.credential.cert({
+    project_id: "roboliam-427c0",
+    private_key: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+    client_email: process.env.FIREBASE_CLIENT_EMAIL,
+  }),
+});
+let db = admin.firestore();
+
+client.commands = new Discord.Collection();
+const commandFiles = fs
+  .readdirSync("./commands")
+  .filter((file) => file.endsWith(".js"));
+for (const file of commandFiles) {
+  const command = require(`./commands/${file}`);
+
+  client.commands.set(command.name, command);
+}
+
+client.once("ready", () => {
+  console.log("RoboLiam is now online.");
+
+  const status = [
+    {
+      activity: ".help | @RoboLiam",
+      type: "WATCHING",
+    },
+    {
+      activity: "With Code.",
+      type: "PLAYING",
+    },
+    {
+      activity: "Minecraft.",
+      type: "PLAYING",
+    },
+    {
+      activity: "Naruto.",
+      type: "WATCHING",
+    },
+    {
+      activity: "LoFi Music.",
+      type: "LISTENING",
+    },
+    {
+      activity: "Furry YouTubers.",
+      type: "WATCHING",
+    },
+  ];
+  let random = status[Math.floor(Math.random() * Math.floor(status.length))];
+  client.user.setActivity(random.activity, {
+    type: random.type,
+  });
+  setInterval(async function () {
+    random = status[Math.floor(Math.random() * Math.floor(status.length))];
+    client.user.setActivity(random.activity, {
+      type: random.type,
+    });
+  }, 60000);
+});
+
+client.on("message", (message) => {
+  let doc;
+  if (message.guild) {
+    doc = message.guild.id;
+  } else {
+    doc = "NULL";
+  }
+  db.collection("guilds")
+    .doc(doc)
+    .get()
+    .then((q) => {
+      if (q.exists) {
+        prefix = q.data().prefix;
+      } else {
+        prefix = ".";
+      }
+    })
+    .then(() => {
+      if (
+        message.content == `<@${client.user.id}>` ||
+        message.content == `<@!${client.user.id}>`
+      )
+        return message.channel.send(`The prefix is \`${prefix}\`.`);
+
+      if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+      const args = message.content.slice(prefix.length).trim().split(/ +/);
+      const commandName = args.shift().toLowerCase();
+
+      const command =
+        client.commands.get(commandName) ||
+        client.commands.find(
+          (cmd) => cmd.aliases && cmd.aliases.includes(commandName)
+        );
+
+      if (!command) return;
+
+      if (command.guildOnly && message.channel.type !== "text") {
+        return message.reply("I can't execute that command inside DMs!");
+      }
+
+      if (command.args && !args.length) {
+        let reply = `You didn't provide any arguments!`;
+
+        if (command.usage) {
+          reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+        }
+
+        return message.reply(reply);
+      }
+
+      if (command.permission) {
+        if (
+          !message.guild
+            .member(message.author)
+            .hasPermission(command.permission)
+        ) {
+          return message.reply(
+            `You don't have permission to do that!\nYou need to be able to \`${command.permission}\` to run this command.`
+          );
+        }
+      }
+
+      try {
+        command.execute(message, args, db);
+      } catch (error) {
+        console.error(error);
+        message.reply("There was an error executing that command!");
+      }
     });
 });
 
-client.commands = new Enmap();
-
-fs.readdir("./commands/music/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/music/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
-    client.commands.set(commandName, props);
+client.on("guildCreate", async (gData) => {
+  db.collection("guilds").doc(gData.id).set({
+    guildID: gData.id,
+    prefix: ".",
   });
 });
 
-fs.readdir("./commands/admin/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/admin/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
-    client.commands.set(commandName, props);
-  });
-});
-
-fs.readdir("./commands/randomstuff/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/randomstuff/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
-    client.commands.set(commandName, props);
-  });
-});
-
-fs.readdir("./commands/info/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/info/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
-    client.commands.set(commandName, props);
-  });
-});
-
-fs.readdir("./commands/games/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/games/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
-    client.commands.set(commandName, props);
-  });
-});
-
-client.login(config.token);
-
-
+client.login(process.env.BOT_TOKEN);
