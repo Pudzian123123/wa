@@ -152,4 +152,4 @@ client.on("guildCreate", async (gData) => {
   });
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login('NzY3NTE2OTcwNzY5MDU1NzQ1.X4zD4Q.J34ZwuPf41kee49kUp5JIfXdJu0');
