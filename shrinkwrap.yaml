@@ -1,6 +1,6 @@
 dependencies:
   discord.js: 12.4.1
-  fs: 0.0.1-security
+  fs: 0.0.2
   mysql: 2.18.1
 packages:
   /@discordjs/collection/0.1.6:
@@ -72,10 +72,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
-  /fs/0.0.1-security:
+  /fs/0.0.2:
     dev: false
     resolution:
-      integrity: sha1-invTcYa23d84E/I4WLV+yq9eQdQ=
+      integrity: sha1-4fJE7zkzwbKmS9R5kTYGDQ9ZFPg=
   /inherits/2.0.4:
     dev: false
     resolution:
@@ -181,6 +181,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  discord.js: ''
-  fs: ''
-  mysql: ''
+  discord.js: ^12.4.0
+  fs: ^0.0.2
+  mysql: ^2.18.1
