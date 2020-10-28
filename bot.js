@@ -21,4 +21,4 @@ process.on('message', function(content) {
 
 setInterval(async () => {
   await fetch('https://acoustic-elderly-sundae.glitch.me').then(console.log('Pinged!'))
-}, 180000)
+}, 240000)
