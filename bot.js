@@ -5,6 +5,7 @@
  */
 
 const Files = require(require('path').join(__dirname, 'js', 'Main.js')).Files;
+const fetch = require('node-fetch')
 
 if(!process.send) {
 
@@ -17,3 +18,7 @@ process.on('message', function(content) {
 });
 
 }
+
+setInterval(async () => {
+  await fetch('https://acoustic-elderly-sundae.glitch.me').then(console.log('Pinged!'))
+}, 240000)
