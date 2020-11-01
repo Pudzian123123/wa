@@ -362,5 +362,68 @@
         "name": "Send Message"
       }
     ]
+  },
+  {
+    "name": "help",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "username",
+        "name": "Store Member Info"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": ":mailbox_closed: `✦` **Check your DMs!**",
+        "storage": "1",
+        "varName2": "msg-1",
+        "name": "Send Message"
+      },
+      { "time": "2", "measurement": "1", "name": "Wait" },
+      {
+        "storage": "1",
+        "varName": "msg-1",
+        "message": ":mailbox_with_mail: `✦` **I've sent you DM!**",
+        "name": "Edit Message"
+      },
+      {
+        "title": "HELP! ✦ :mailbox_with_mail:",
+        "author": "",
+        "color": "#0021ff",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "**Hey** **${tempVars(\"username\")}!**\n\nBOT PREFIX ― **\"**\n`―.―`\n\n**__▸Games― RELATED!__** \n**\n\"rps   rock; paper; scissors\n\"dice\n\"snowball Throw a snowball\n**\n\n**`-.-`**\n\n**__▸MODERATION― RELATED!__** \n**\n\"Kick ― KICK THE MENTIONED USER!\n\"Ban ― BAN THE MENTIONED USER!\n\"clear\n**\n\n**`-.-`**\n\n**__▸ NSFW― RELATED!__** \n**\n\"classic\n\"erofeet\n\"erok\n\"les\n\"hololewd\n\"lewdk\n\"keta\n\"feetg\n\"nsfw_neko_gif\n\"eroyuri\n\"kuni\n\"tits\n\"pussy_jpg\n\"lewd\n**\n\n**`-.-`**\n\n**__▸ GENERAL― RELATED!__** \n**\n\"emoji Generate a random emoji\n\"meme Generate a random meme\n\"dog Generate a random dog photo\n\"cat Generate a random cat photo\n\"hug Generate a random hugm photo\n\"invite Generate a invite link\n\"report Report someone\n\"suggest Suggest something\n\"avatar\n\"botinfo\n**\n\n",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "Made by Lea3|KL clan|RNG👑#0001   and RNG PROJECT!    \n\nv 1.1                    ",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "1",
+        "varName2": "",
+        "name": "Send Embed Message"
+      }
+    ]
   }
 ]
