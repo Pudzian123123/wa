@@ -354,7 +354,7 @@
       },
       {
         "info": "1",
-        "find": "Muted",
+        "find": "muted",
         "storage": "1",
         "varName": "muted",
         "name": "Find Role"
