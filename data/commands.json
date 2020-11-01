@@ -279,7 +279,7 @@
       {
         "storage": "1",
         "varName": "embded",
-        "fieldName": "Please type -kick @user reason!",
+        "fieldName": "Chwilowo nie działa",
         "message": "${member}",
         "inline": "1",
         "name": "Add Embed Field"
@@ -308,7 +308,7 @@
         "name": "Kick Member"
       },
       {
-       "title": "Mod",
+        "title": "Mod",
         "author": "",
         "color": "#ff0000",
         "timestamp": "false",
@@ -323,7 +323,7 @@
       {
         "storage": "1",
         "varName": "embded",
-        "fieldName": "Thou has been kicked!",
+        "fieldName": "Chwilowo nie działa",
         "message": "XD",
         "inline": "1",
         "name": "Add Embed Field"
@@ -369,7 +369,7 @@
       {
         "storage": "1",
         "varName": "embded",
-        "fieldName": "Please type -ban @user reason!",
+        "fieldName": "Chwilowo nie działa",
         "message": "${member}",
         "inline": "1",
         "name": "Add Embed Field"
@@ -416,7 +416,7 @@
       {
         "storage": "1",
         "varName": "embded",
-        "fieldName": "Thou has been banned!",
+        "fieldName": "Chwilowo nie działa",
         "message": "${member}",
         "inline": "1",
         "name": "Add Embed Field"
