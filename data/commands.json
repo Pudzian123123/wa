@@ -251,13 +251,14 @@
     "name": "kick",
     "permissions": "KICK_MEMBERS",
     "restriction": "1",
+    "_id": "OSJRy",
     "actions": [
       {
-        "condition": "1",
-        "comparison": "0",
+        "condition": "0",
+        "comparison": "2",
         "value": "1",
-        "iftrue": "3",
-        "iftrueVal": "2",
+        "iftrue": "2",
+        "iftrueVal": "4",
         "iffalse": "0",
         "iffalseVal": "",
         "name": "Check Parameters"
@@ -278,8 +279,8 @@
       {
         "storage": "1",
         "varName": "embded",
-        "fieldName": "Wymień jednego użytkownika, aby go wyrzucić!",
-        "message": "+Kick [@user] [reason]",
+        "fieldName": "Please type -kick @user reason!",
+        "message": "${member}",
         "inline": "1",
         "name": "Add Embed Field"
       },
@@ -290,7 +291,9 @@
         "varName2": "",
         "name": "Send Embed Message"
       },
-      { "name": "End Action Sequence" },
+      {
+        "name": "End Action Sequence"
+      },
       {
         "info": "1",
         "infoIndex": "2",
@@ -300,9 +303,37 @@
       },
       {
         "member": "0",
-        "varName": "",
-        "reason": "${tempVars(\"reason\") || \"\"}",
+        "varName": "user",
+        "reason": "${tempVars(\"reason\")}",
         "name": "Kick Member"
+      },
+      {
+       "title": "Mod",
+        "author": "",
+        "color": "#ff0000",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embded",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "fieldName": "Thou has been kicked!",
+        "message": "XD",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
       }
     ]
   },
