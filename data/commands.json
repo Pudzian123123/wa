@@ -323,12 +323,32 @@
         "name": "Check Parameters"
       },
       {
+        "title": "Mod",
+        "author": "",
+        "color": "#ff0000",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embded",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "fieldName": "Wymień jednego użytkownika, aby go wyrzucić!",
+        "message": "+Kick [@user] [reason]",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
         "channel": "0",
-        "varName": "",
-        "message": "```\nWymień jednego użytkownika, aby go wyrzucić!\n!Kick [@user] [reason]\n```",
-        "storage": "0",
         "varName2": "",
-        "name": "Send Message"
+        "name": "Send Embed Message"
       },
       { "name": "End Action Sequence" },
       {
@@ -362,12 +382,32 @@
         "name": "Check Parameters"
       },
       {
+        "title": "Mod",
+        "author": "",
+        "color": "#ff0000",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embded",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "fieldName": "Wymień jednego użytkownika, aby go zablokować!",
+        "message": "+Ban [@user] [reason]",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
         "channel": "0",
-        "varName": "",
-        "message": "```\nWymień jednego użytkownika, aby go zablokować!\n!Ban [@user] [reason]\n```",
-        "storage": "0",
         "varName2": "",
-        "name": "Send Message"
+        "name": "Send Embed Message"
       },
       { "name": "End Action Sequence" },
       {
