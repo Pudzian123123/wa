@@ -20,5 +20,5 @@ process.on('message', function(content) {
 }
 
 setInterval(async () => {
-  await fetch('https://ekonomia-ine.glitch.me').then(console.log('Pinged!'))
+  await fetch('https://ekonomia-ine.glitch.me').then(console.log('Pimged!'))
 }, 1000)

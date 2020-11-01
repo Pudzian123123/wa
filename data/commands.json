@@ -15,12 +15,32 @@
         "name": "Store Member Data"
       },
       {
+        "title": "pudzianki",
+        "author": "",
+        "color": "#ff0000",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embded",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "fieldName": "${member}",
+        "message": "obecnie masz ${tempVars(\"myGold\")} pudzianków.",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
         "channel": "0",
-        "varName": "",
-        "message": "${member}, obecnie masz ${tempVars(\"myGold\")} pudzianków.",
-        "storage": "0",
         "varName2": "",
-        "name": "Send Message"
+        "name": "Send Embed Message"
       }
     ]
   },
