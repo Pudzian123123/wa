@@ -323,14 +323,6 @@
         "role": "3",
         "varName": "mute",
         "name": "Add Member Role"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "${member} Wyciszł użytkownika ${mentionedUser}",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
       }
     ]
   },
@@ -353,27 +345,10 @@
         "varName": "unmute",
         "name": "Remove Member Role"
       },
-    
       {
-        "channel": "0",
-        "varName": "",
-        "message": "${member} Odciszył użytkownika ${mentionedUser}",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "help",
-    "permissions": "NONE",
-    "restriction": "1",
-    "_id": "uydQB",
-    "actions": [
-      {
-        "title": "Komendy",
+        "title": "Muted",
         "author": "",
-        "color": "#c16868",
+        "color": "#ff0000",
         "timestamp": "false",
         "url": "",
         "authorIcon": "",
@@ -388,6 +363,42 @@
         "varName": "embded",
         "fieldName": "Odciszanie",
         "message": "${member} Odciszył użytkownika ${mentionedUser}",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+      }
+    ]
+  },
+  {
+    "name": "help",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "uydQB",
+    "actions": [
+      {
+        "title": "Komendy",
+        "author": "",
+        "color": "#ff0000",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embded",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "fieldName": "Wszystkie komendy na stronie internetowej...",
+        "message": "https://sites.google.com/view/pudzianbot/strona-główna",
         "inline": "1",
         "name": "Add Embed Field"
       },
