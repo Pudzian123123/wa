@@ -84,32 +84,12 @@
         "name": "Check Variable"
       },
       {
-        "title": "Pudzianki",
-        "author": "",
-        "color": "#ff0000",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embded",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
-        "fieldName": "Nie wygrałeś ani nie straciłeś żadnego złota.",
-        "message": "${member}",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
         "channel": "0",
+        "varName": "",
+        "message": "${member} Nie wygrałeś ani nie straciłeś żadnego złota.",
+        "storage": "0",
         "varName2": "",
-        "name": "Send Embed Message"
+        "name": "Send Message"
       },
       { "name": "End Action Sequence" },
       {
@@ -124,32 +104,12 @@
         "name": "Check Variable"
       },
       {
-        "title": "Pudzianki",
-        "author": "",
-        "color": "#ff0000",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embded",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
-        "fieldName": "Wygrałeś ${tempVars(\"result\")} pudzianków!",
-        "message": "${member}",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
         "channel": "0",
+        "varName": "",
+        "message": "${member} Wygrałeś ${tempVars(\"result\")} pudzianków!",
+        "storage": "0",
         "varName2": "",
-        "name": "Send Embed Message"
+        "name": "Send Message"
       },
       {
         "member": "1",
@@ -172,32 +132,12 @@
         "name": "Check Variable"
       },
       {
-        "title": "Pudzianki",
-        "author": "",
-        "color": "#ff0000",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embded",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
-        "fieldName": "Przegrałeś ${-tempVars(\"result\")} pudzianków...",
-        "message": "${member}",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
         "channel": "0",
+        "varName": "",
+        "message": "${member} Przegrałeś ${-tempVars(\"result\")} pudzianków...",
+        "storage": "0",
         "varName2": "",
-        "name": "Send Embed Message"
+        "name": "Send Message"
       },
       {
         "member": "1",
