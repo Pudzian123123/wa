@@ -466,5 +466,87 @@
         "name": "Send Embed Message"
       }
     ]
+  },
+  {
+    "name": "ogl",
+    "permissions": "ADMINISTRATOR",
+    "restriction": "1",
+    "_id": "dQCYI",
+    "actions": [
+      {
+        "info": "0",
+        "find": "748349761878360205",
+        "storage": "1",
+        "varName": "TweetMSG",
+        "name": "Find Channel"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "avatar",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "user",
+        "name": "Store Member Info"
+      },
+      {
+        "info": "1",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "message",
+        "name": "Store Command Params"
+      },
+      {
+        "title": "",
+        "author": "${tempVars(\"user\")}",
+        "color": "#CC0099",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "${tempVars(\"avatar\")}",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "tweetmsg",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "tweetmsg",
+        "message": "${tempVars(\"message\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "tweetmsg",
+        "message": "MTASA BOT v1.0",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "tweetmsg",
+        "channel": "5",
+        "varName2": "TweetMSG",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "storage": "0",
+        "varName": "",
+        "reason": "",
+        "name": "Delete Message"
+      }
+    ]
   }
 ]
