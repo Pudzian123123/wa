@@ -328,52 +328,84 @@
   },
   {
     "name": "unmute",
-    "permissions": "MUTE_MEMBERS",
+    "permissions": "NONE",
     "restriction": "1",
     "actions": [
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "3",
+        "iftrueVal": "2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Parameters"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Please specify a member to unmute.\n`?unmute [@user]`",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
       {
         "info": "1",
         "find": "Muted",
         "storage": "1",
-        "varName": "unmute",
+        "varName": "muted",
         "name": "Find Role"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "role": "3",
+        "varName2": "muted",
+        "iftrue": "3",
+        "iftrueVal": "2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check If Member has Role"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Member is not currently muted.",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
       },
       {
         "member": "0",
         "varName2": "",
         "role": "3",
-        "varName": "unmute",
+        "varName": "muted",
         "name": "Remove Member Role"
       },
       {
-        "title": "Muted",
-        "author": "",
-        "color": "#ff0000",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
+        "member": "0",
+        "varName": "",
+        "info": "3",
         "storage": "1",
-        "varName": "embded",
-        "name": "Create Embed Message"
+        "varName2": "member",
+        "name": "Store Member Info"
       },
       {
-        "storage": "1",
-        "varName": "embded",
-        "fieldName": "Odciszanie",
-        "message": "${member} Odciszył użytkownika ${mentionedUser}",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
         "channel": "0",
+        "varName": "",
+        "message": "${tempVars(\"member\")} has been unmuted.",
+        "storage": "0",
         "varName2": "",
-        "name": "Send Embed Message"
+        "name": "Send Message"
       }
-    ]
+    ],
+    "_id": "mBLWp"
   },
   {
     "name": "help",
