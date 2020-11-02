@@ -488,7 +488,7 @@
         "name": "Store Command Params"
       },
       {
-        "title": "Say",
+        "title": "${tempVars(\"embedMessage\")}",
         "author": "",
         "color": "8b0000",
         "timestamp": "true",
@@ -499,12 +499,6 @@
         "storage": "1",
         "varName": "sayEmbed",
         "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "sayEmbed",
-        "message": "${member} Said\n${tempVars(\"embedMessage\")}",
-        "name": "Set Embed Description"
       },
       {
         "storage": "1",
