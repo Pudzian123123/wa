@@ -468,8 +468,56 @@
     ]
   },
   {
+    "name": "og",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [
+      { "storage": "0", "varName": "", "name": "Delete Message" },
+      {
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "embedTitle",
+        "name": "Store Command Params"
+      },
+      {
+        "info": "1",
+        "infoIndex": "2",
+        "storage": "1",
+        "varName": "embedMessage",
+        "name": "Store Command Params"
+      },
+      {
+        "title": "Ogłoszenie",
+        "author": "",
+        "color": "8b0000",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "sayEmbed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "sayEmbed",
+        "message": "${tempVars(\"embedMessage\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "sayEmbed",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+      }
+    ]
+  },
+  {
     "name": "say",
-    "permissions": "ADMINISTRATOR",
+    "permissions": "NONE",
     "restriction": "1",
     "actions": [
       { "storage": "0", "varName": "", "name": "Delete Message" },
