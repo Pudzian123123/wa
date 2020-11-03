@@ -469,7 +469,7 @@
   },
   {
     "name": "og",
-    "permissions": "ADMINISTRATOR",
+    "permissions": "NONE",
     "restriction": "1",
     "actions": [
       { "storage": "0", "varName": "", "name": "Delete Message" },
@@ -517,7 +517,7 @@
   },
   {
     "name": "say",
-    "permissions": "ADMINISTRATOR",
+    "permissions": "NONE",
     "restriction": "1",
     "actions": [
       { "storage": "0", "varName": "", "name": "Delete Message" },
