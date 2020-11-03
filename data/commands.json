@@ -468,275 +468,84 @@
     ]
   },
   {
-    "name": "og",
-    "permissions": "NONE",
+    "name": "ogl",
+    "permissions": "ADMINISTRATOR",
     "restriction": "1",
-    "actions": [
-      { "storage": "0", "varName": "", "name": "Delete Message" },
-      {
-        "info": "0",
-        "infoIndex": "1",
-        "storage": "1",
-        "varName": "embedTitle",
-        "name": "Store Command Params"
-      },
-      {
-        "info": "1",
-        "infoIndex": "2",
-        "storage": "1",
-        "varName": "embedMessage",
-        "name": "Store Command Params"
-      },
-      {
-        "title": "Ogłoszenie",
-        "author": "",
-        "color": "8b0000",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "sayEmbed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "sayEmbed",
-        "message": "${tempVars(\"embedMessage\")}",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "sayEmbed",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "say",
-    "permissions": "NONE",
-    "restriction": "1",
-    "actions": [
-      { "storage": "0", "varName": "", "name": "Delete Message" },
-      {
-        "info": "0",
-        "infoIndex": "1",
-        "storage": "1",
-        "varName": "embedTitle",
-        "name": "Store Command Params"
-      },
-      {
-        "info": "1",
-        "infoIndex": "2",
-        "storage": "1",
-        "varName": "embedMessage",
-        "name": "Store Command Params"
-      },
-      {
-        "title": "${tempVars(\"embedMessage\")}",
-        "author": "",
-        "color": "8b0000",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "sayEmbed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "sayEmbed",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "tmute",
-    "permissions": "NONE",
-    "restriction": "1",
+    "_id": "dQCYI",
     "actions": [
       {
         "info": "0",
-        "infoIndex": "2",
+        "find": "748349761878360205",
         "storage": "1",
-        "varName": "Time",
-        "name": "Store Command Params"
-      },
-      {
-        "condition": "0",
-        "comparison": "1",
-        "value": "2",
-        "iftrue": "0",
-        "iftrueVal": "13",
-        "iffalse": "2",
-        "iffalseVal": "7",
-        "name": "Check Parameters"
-      },
-      {
-        "title": "Wrong Parameters!",
-        "author": "",
-        "color": "",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "WrongEmbed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "WrongEmbed",
-        "message": "\n\nPlease insert 3 parameters.\n\nUsage : !tmute @user [time]\n\n",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "WrongEmbed",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      },
-      { "name": "End Action Sequence" },
-      {
-        "info": "0",
-        "find": "739069101309427803",
-        "storage": "1",
-        "varName": "ModRole",
-        "name": "Find Role"
+        "varName": "TweetMSG",
+        "name": "Find Channel"
       },
       {
         "member": "1",
         "varName": "",
-        "role": "3",
-        "varName2": "ModRole",
-        "iftrue": "2",
-        "iftrueVal": "12",
-        "iffalse": "1",
-        "iffalseVal": "",
-        "name": "Check If Member has Role"
-      },
-      {
-        "title": "You don't own the required permissions!",
-        "author": "",
-        "color": "",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
+        "info": "16",
         "storage": "1",
-        "varName": "embed",
-        "name": "Create Embed Message"
+        "varName2": "avatar",
+        "name": "Store Member Info"
       },
       {
-        "storage": "1",
-        "varName": "embed",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      },
-      { "name": "End Action Sequence" },
-      {
-        "member": "0",
-        "varName": "",
-        "role": "3",
-        "varName2": "MuteRole",
-        "iftrue": "0",
-        "iftrueVal": "",
-        "iffalse": "2",
-        "iffalseVal": "16",
-        "name": "Check If Member has Role"
-      },
-      {
-        "title": "You cannot mute someone who is muted!",
-        "author": "",
-        "color": "",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embed13",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embed13",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      },
-      { "name": "End Action Sequence" },
-      {
-        "message": "0",
-        "varName": "",
-        "info": "3",
-        "storage": "1",
-        "varName2": "Author",
-        "name": "Store Message Info"
-      },
-      {
-        "message": "0",
+        "member": "1",
         "varName": "",
         "info": "2",
         "storage": "1",
-        "varName2": "MessageText",
-        "name": "Store Message Info"
+        "varName2": "user",
+        "name": "Store Member Info"
       },
       {
-        "info": "0",
-        "find": "773184241227137054",
+        "info": "1",
+        "infoIndex": "1",
         "storage": "1",
-        "varName": "MuteLog",
-        "name": "Find Channel"
+        "varName": "message",
+        "name": "Store Command Params"
       },
       {
+        "title": "",
+        "author": "${tempVars(\"user\")}",
+        "color": "#CC0099",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "${tempVars(\"avatar\")}",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "tweetmsg",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "tweetmsg",
+        "message": "${tempVars(\"message\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "tweetmsg",
+        "message": "MTASA BOT v1.0",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "tweetmsg",
         "channel": "5",
-        "varName": "MuteLog",
-        "message": "\n\n${tempVars(\"Author\")} temporarily muted a user. \n\nText : ${tempVars(\"MessageText\")}\n\n",
+        "varName2": "TweetMSG",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
+        "name": "Send Embed Message"
+      },
+      {
         "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "info": "0",
-        "find": "769943679065522196",
-        "storage": "1",
-        "varName": "MuteRole",
-        "name": "Find Role"
-      },
-      {
-        "member": "0",
-        "varName2": "",
-        "role": "3",
-        "varName": "MuteRole",
-        "name": "Add Member Role"
-      },
-      {
-        "channel": "0",
         "varName": "",
-        "message": "The User has been muted successfully!",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      { "time": "${tempVars(\"Time\")}", "measurement": "2", "name": "Wait" },
-      {
-        "member": "0",
-        "varName2": "",
-        "role": "3",
-        "varName": "MuteRole",
-        "name": "Remove Member Role"
+        "reason": "",
+        "name": "Delete Message"
       }
     ]
   }
