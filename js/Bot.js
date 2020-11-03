@@ -36,7 +36,7 @@ Bot.reformatCommands = function() {
 	for(let i = 0; i < data.length; i++) {
 		const com = data[i];
 		if(com) {
-			if(this.DBM.Files.data.settings.case === 'false') {
+			if(this.DBM.Files.data.settings.case === 'true') {
 				this.$cmds[com.name.toLowerCase()] = com;
 			} else {
 				this.$cmds[com.name] = com;
