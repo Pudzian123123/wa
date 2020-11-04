@@ -341,20 +341,19 @@
     "name": "ban",
     "permissions": "BAN_MEMBERS",
     "restriction": "1",
-    "_id": "bRzHa",
     "actions": [
       {
         "condition": "0",
         "comparison": "2",
         "value": "1",
-        "iftrue": "2",
-        "iftrueVal": "4",
+        "iftrue": "3",
+        "iftrueVal": "3",
         "iffalse": "0",
         "iffalseVal": "",
         "name": "Check Parameters"
       },
       {
-        "title": "Mod",
+        "title": "**Właściwy format:** +ban @user <reason>",
         "author": "",
         "color": "#ff0000",
         "timestamp": "false",
@@ -363,22 +362,19 @@
         "imageUrl": "",
         "thumbUrl": "",
         "storage": "1",
-        "varName": "embded",
+        "varName": "embedkick",
         "name": "Create Embed Message"
       },
       {
         "storage": "1",
-        "varName": "embded",
-        "fieldName": "Chwilowo nie działa",
-        "message": "${member}",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
+        "varName": "embedkick",
         "channel": "0",
         "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
         "name": "Send Embed Message"
       },
       {
@@ -392,44 +388,71 @@
         "name": "Store Command Params"
       },
       {
+        "server": "0",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "sname",
+        "name": "Store Server Info"
+      },
+      {
+        "channel": "2",
+        "varName": "",
+        "message": "Zostałeś zbanowany: ***${tempVars(\"sname\")}***.\n**Reason:** *${tempVars(\"reason\")}*",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
         "member": "0",
         "varName": "",
         "reason": "${tempVars(\"reason\")}",
-        "guild": "0",
-        "varName2": "",
-        "days": "",
         "name": "Ban Member"
       },
       {
-        "title": "Mod",
+        "storage": "0",
+        "varName": "",
+        "name": "Delete Message"
+      },
+      {
+        "title": "🔥 BANS 🔥",
         "author": "",
-        "color": "#ff0000",
+        "color": "",
         "timestamp": "false",
         "url": "",
         "authorIcon": "",
         "imageUrl": "",
         "thumbUrl": "",
         "storage": "1",
-        "varName": "embded",
+        "varName": "bany",
         "name": "Create Embed Message"
       },
       {
         "storage": "1",
-        "varName": "embded",
-        "fieldName": "Chwilowo nie działa",
-        "message": "${member}",
-        "inline": "1",
-        "name": "Add Embed Field"
+        "varName": "bany",
+        "message": "**${mentionedUser}** został zbanowany za **${tempVars(\"reason\")}**",
+        "name": "Set Embed Description"
       },
       {
         "storage": "1",
-        "varName": "embded",
+        "varName": "bany",
+        "message": "Sporządzono przez: ${msg.author.tag}",
+        "footerIcon": "${msg.author.avatarURL}",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "bany",
         "channel": "0",
         "varName2": "",
+        "storage3": "0",
+        "varName3": "",
         "name": "Send Embed Message"
       }
     ],
-    "comType": "0"
+    "_id": "REWrP"
   },
   {
     "name": "help",
