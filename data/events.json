@@ -1,168 +1,32 @@
 [
   null,
   {
-    "name": "Welcome",
-    "temp": "member-joined",
+    "name": "Join",
+    "temp": "user",
     "event-type": "6",
-    "_id": "GPPJC",
     "actions": [
       {
-        "info": "2",
-        "find": "Wel !",
-        "storage": "1",
-        "varName": "topic-channel",
-        "name": "Find Channel"
-      },
-      {
-        "server": "0",
+        "channel": "4",
         "varName": "",
-        "info": "36",
-        "storage": "1",
-        "varName2": "member-count",
-        "name": "Store Server Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "server-name",
-        "name": "Store Server Info"
-      },
-      {
-        "member": "2",
-        "varName": "member-joined",
-        "info": "2",
-        "storage": "1",
-        "varName2": "member-name",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "2",
-        "varName": "member-joined",
-        "info": "21",
-        "storage": "1",
-        "varName2": "member-creation",
-        "name": "Store Member Info"
-      },
-      {
-        "title": "",
-        "author": "",
-        "color": "00E4FF",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "mbed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Welcome :hibiscus:",
-        "message": "Welcome **${tempVars(\"member-name\")}** To **${tempVars(\"server-name\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Family :sparkling_heart:",
-        "message": "Member #**${tempVars(\"member-count\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Account Creation Date :ringed_planet:",
-        "message": "**${tempVars(\"member-creation\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "message": "Created By El#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "channel": "5",
-        "varName2": "topic-channel",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
+        "message": "**Witaj** ${tempVars(\"user\")} !!!",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
       }
     ]
   },
   {
     "name": "Leave",
-    "temp": "member-left",
+    "temp": "user",
     "event-type": "7",
-    "_id": "DQaEE",
     "actions": [
       {
-        "info": "2",
-        "find": "Bye !",
-        "storage": "1",
-        "varName": "server-topic",
-        "name": "Find Channel"
-      },
-      {
-        "member": "2",
-        "varName": "member-left",
-        "info": "2",
-        "storage": "1",
-        "varName2": "left-name",
-        "name": "Store Member Info"
-      },
-      {
-        "server": "0",
+        "channel": "4",
         "varName": "",
-        "info": "36",
-        "storage": "1",
-        "varName2": "server-members",
-        "name": "Store Server Info"
-      },
-      {
-        "title": "Member Left The Server",
-        "author": "",
-        "color": "FF0000",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "mbedd",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "mbedd",
-        "message": "**${tempVars(\"left-name\")}** Just Left The Server \nWe Are Left With **${tempVars(\"server-members\")}** Members",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "mbedd",
-        "message": "Created By El#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "mbedd",
-        "channel": "5",
-        "varName2": "server-topic",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
+        "message": "${tempVars(\"user\")} nas nie lubi ;(",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
       }
     ]
   }

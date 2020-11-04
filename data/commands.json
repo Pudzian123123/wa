@@ -485,83 +485,206 @@
     "comType": "0"
   },
   {
-    "name": "Welcomer",
+    "name": "mc",
     "permissions": "NONE",
-    "restriction": "0",
-    "_id": "dOJRg",
+    "restriction": "1",
+    "_id": "RQILk",
     "actions": [
       {
-        "title": "Welcome",
+        "condition": "0",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "2",
+        "iftrueVal": "6",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Parameters"
+      },
+      {
+        "title": "",
         "author": "",
-        "color": "32FF00",
-        "timestamp": "true",
+        "color": "",
+        "timestamp": "false",
         "url": "",
         "authorIcon": "",
         "imageUrl": "",
         "thumbUrl": "",
         "storage": "1",
-        "varName": "lp",
+        "varName": "embederror",
         "name": "Create Embed Message"
       },
       {
         "storage": "1",
-        "varName": "lp",
-        "fieldName": "Setup",
-        "message": "**To Set Welcome Channel , Set The Channel's Topic As `Yo !` Please Type `Yo !` As The Channel Topic To Use This Feature**\n ",
+        "varName": "embederror",
+        "fieldName": "Fatal error!",
+        "message": "Give us a valid Minecraft nickname... ",
         "inline": "1",
         "name": "Add Embed Field"
       },
       {
         "storage": "1",
-        "varName": "lp",
-        "message": "Created By EL PEDRO#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "lp",
+        "varName": "embederror",
         "channel": "0",
         "varName2": "",
-        "storage3": "0",
-        "varName3": "",
         "name": "Send Embed Message"
       },
       {
-        "title": "Leave",
+        "name": "End Action Sequence"
+      },
+      {
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "nick",
+        "name": "Store Command Params"
+      },
+      {
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mojang.com/users/profiles/minecraft/${tempVars(\"nick\")}",
+        "path": "id",
+        "storage": "1",
+        "varName": "id",
+        "debugMode": "1",
+        "headers": "",
+        "name": "Store Json From WebAPI"
+      },
+      {
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://api.mojang.com/user/profiles/${tempVars(\"id\")}/names",
+        "path": "*.name",
+        "storage": "1",
+        "varName": "namechanges",
+        "debugMode": "1",
+        "headers": "",
+        "name": "Store Json From WebAPI"
+      },
+      {
+        "title": "${tempVars(\"nick\")} Account Information",
         "author": "",
-        "color": "FF0000",
-        "timestamp": "true",
+        "color": "",
+        "timestamp": "false",
         "url": "",
         "authorIcon": "",
-        "imageUrl": "",
+        "imageUrl": "https://visage.surgeplay.com/full/256/${tempVars(\"id\")}",
         "thumbUrl": "",
         "storage": "1",
-        "varName": "llp2",
+        "varName": "embed",
         "name": "Create Embed Message"
       },
       {
         "storage": "1",
-        "varName": "llp2",
-        "fieldName": "Welcome",
-        "message": "**To Set Leave Channel , Set The Channel's Topic As `Bye !` Please Type `Bye !` As The Channel Topic To Use This Feature**\n ",
+        "varName": "embed",
+        "fieldName": "Name Changes History",
+        "message": "${tempVars(\"namechanges\") || \"Error fetching data...\"}",
         "inline": "1",
         "name": "Add Embed Field"
       },
       {
         "storage": "1",
-        "varName": "llp2",
-        "message": "Created By EL PEDRO#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
+        "varName": "embed",
+        "fieldName": "UUID",
+        "message": "${tempVars(\"id\")}",
+        "inline": "1",
+        "name": "Add Embed Field"
       },
       {
         "storage": "1",
-        "varName": "llp2",
+        "varName": "embed",
+        "fieldName": "NameMC Link",
+        "message": "[Click here](https://es.namemc.com/profile/${tempVars(\"id\")}) To go to her NameMC Profile",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
         "channel": "0",
         "varName2": "",
-        "storage3": "0",
-        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ],
+    "comType": "0",
+    "_aliases": ["namemc", "Minecraft", "minecraft"],
+    "_timeRestriction": 1
+  },
+  {
+    "name": "iq",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "iq",
+        "min": "1",
+        "max": "200",
+        "name": "Generate Random Number"
+      },
+      {
+        "condition": "0",
+        "comparison": "1",
+        "value": "1",
+        "iftrue": "2",
+        "iftrueVal": "4",
+        "iffalse": "2",
+        "iffalseVal": "8",
+        "name": "Check Parameters"
+      },
+      { "name": "End Action Sequence" },
+      {
+        "title": "IQ",
+        "author": "",
+        "color": "#33baab",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "1qembed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "1qembed",
+        "message": "**${member} posiadasz ${tempVars(\"iq\")} iq!**",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "1qembed",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+      },
+      { "name": "End Action Sequence" },
+      {
+        "title": "IQ",
+        "author": "",
+        "color": "#33baab",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "2qembed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "2qembed",
+        "message": "**${mentionedUser} posiada ${tempVars(\"iq\")} iq!**",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "2qembed",
+        "channel": "0",
+        "varName2": "",
         "name": "Send Embed Message"
       }
     ]
