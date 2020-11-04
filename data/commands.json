@@ -1184,5 +1184,154 @@
       }
     ],
     "comType": "3"
+  },
+  {
+    "name": "Kiss",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "OahBR",
+    "actions": [
+      {
+        "member": "0",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "otherpeep",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "Youuuu",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "${tempVars(\"Youuuu\")} Pocałował ${tempVars(\"otherpeep\")}",
+        "author": "",
+        "color": "",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "https://media1.tenor.com/images/f5167c56b1cca2814f9eca99c4f4fab8/tenor.gif?itemid=6155657",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "KissFun",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "KissFun",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
+        "name": "Send Embed Message"
+      }
+    ]
+  },
+  {
+    "name": "Slap",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "TyHjR",
+    "actions": [
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "2",
+        "iftrueVal": "6",
+        "iffalse": "0",
+        "iffalseVal": "9",
+        "name": "Check Parameters"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": ":no_entry: **Please mention a user to slap.** | ``>slap @user``",
+        "storage": "1",
+        "varName2": "f1",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "time": "4",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "f1",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://nekos.life/api/v2/img/slap",
+        "path": "url",
+        "storage": "1",
+        "varName": "image",
+        "debugMode": "1",
+        "headers": "",
+        "name": "Store Json From WebAPI"
+      },
+      {
+        "title": "${msg.author.tag} spoliczkował ${mentionedUser.tag}",
+        "author": "",
+        "color": "",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "${tempVars(\"image\")}",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "msg",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "message": "Powered by nekos.life api",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+      }
+    ],
+    "comType": "0",
+    "_aliases": []
   }
 ]
