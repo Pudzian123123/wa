@@ -1331,5 +1331,99 @@
         "name": "Send Embed Message"
       }
     ]
+  },
+  {
+    "name": "zglos",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "jsexV",
+    "actions": [
+      {
+        "storage": "0",
+        "varName": "",
+        "name": "Delete Message"
+      },
+      {
+        "info": "2",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "user",
+        "name": "Store Command Params"
+      },
+      {
+        "info": "1",
+        "infoIndex": "2",
+        "storage": "1",
+        "varName": "reason",
+        "name": "Store Command Params"
+      },
+      {
+        "info": "1",
+        "find": "zgłoszenia",
+        "storage": "1",
+        "varName": "reported",
+        "name": "Find Channel"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "id",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "AVATAR",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "**ZGŁOSZENIE**",
+        "author": "",
+        "color": "#E60EF1",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "reported4",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "reported4",
+        "message": "Informacje o zgłoszeniu :arrow_down: \n\n• **Zgłaszający** => ${member}\n• **Zgłoszony** => ${tempVars(\"user\")}\n• **Powód** => ${tempVars(\"reason\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "reported4",
+        "channel": "5",
+        "varName2": "reported",
+        "name": "Send Embed Message"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Twoje zgłoszenie zostało wysłane do administracji.",
+        "storage": "1",
+        "varName2": "send",
+        "name": "Send Message"
+      },
+      {
+        "time": "5",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "send",
+        "name": "Delete Message"
+      }
+    ]
   }
 ]
