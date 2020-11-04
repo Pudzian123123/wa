@@ -196,22 +196,111 @@
   {
     "name": "avatar",
     "permissions": "NONE",
-    "restriction": "1",
+    "restriction": "0",
+    "_id": "ovynz",
     "actions": [
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "8",
+        "name": "Check Parameters"
+      },
       {
         "member": "0",
         "varName": "",
+        "info": "16",
         "storage": "1",
-        "varName2": "img",
-        "name": "Create Image from Avatar"
+        "varName2": "avatar",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "info": "21",
+        "storage": "1",
+        "varName2": "tagmen",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "",
+        "author": "",
+        "color": "",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "${tempVars(\"avatar\")}",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
       },
       {
         "storage": "1",
-        "varName": "img",
+        "varName": "embed",
+        "message": "${tempVars(\"tagmen\")} Avatar!",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
         "channel": "0",
         "varName2": "",
-        "message": "",
-        "name": "Send Image"
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "avatarauth",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "21",
+        "storage": "1",
+        "varName2": "tagauth",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "",
+        "author": "",
+        "color": "",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "${tempVars(\"avatarauth\")}",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embedauth",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embedauth",
+        "message": "${tempVars(\"tagauth\")} Avatar!",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "embedauth",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
       }
     ]
   },
