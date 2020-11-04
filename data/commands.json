@@ -1084,7 +1084,7 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "Pomyślnie wyczyszczono ostrzeżenia! <a:verified:753266753987149895>",
+        "message": "Pomyślnie wyczyszczono ostrzeżenia! <a:white_check_mark:753266753987149895>",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -1099,7 +1099,7 @@
         "channel": "0",
         "varName": "",
         "info": "0",
-        "search": "Pomyślnie wyczyszczono ostrzeżenia! <a:verified:753266753987149895>",
+        "search": "Pomyślnie wyczyszczono ostrzeżenia! <a:white_check_mark:753266753987149895>",
         "storage": "1",
         "varName2": "delete",
         "name": "Find Message"
