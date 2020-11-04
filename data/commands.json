@@ -1285,220 +1285,51 @@
     ]
   },
   {
-    "name": "mute",
-    "permissions": "MUTE_MEMBERS",
-    "restriction": "1",
-    "actions": [
-      {
-        "condition": "0",
-        "comparison": "0",
-        "value": "2",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Parameters"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": ">>> this ain't it chief\ntry using [p]mute [@user] [minutes]\n",
-        "storage": "0",
-        "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "info": "2",
-        "infoIndex": "1",
-        "storage": "1",
-        "varName": "user",
-        "name": "Store Command Params"
-      },
-      {
-        "info": "0",
-        "infoIndex": "2",
-        "storage": "1",
-        "varName": "minutes",
-        "name": "Store Command Params"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "serverName",
-        "name": "Store Server Info"
-      },
-      {
-        "info": "1",
-        "find": "Muted",
-        "storage": "1",
-        "varName": "role",
-        "name": "Find Role"
-      },
-      {
-        "storage": "1",
-        "varName": "role",
-        "comparison": "0",
-        "value": "",
-        "iftrue": "2",
-        "iftrueVal": "12",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Variable"
-      },
-      {
-        "roleName": "Muted",
-        "hoist": "true",
-        "mentionable": "true",
-        "color": "",
-        "position": "",
-        "storage": "1",
-        "varName": "role",
-        "name": "Create Role"
-      },
-      {
-        "role": "3",
-        "varName": "role",
-        "permission": "29",
-        "state": "1",
-        "reason": "",
-        "name": "Set Role Permissions"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "member": "2",
-        "varName2": "user",
-        "role": "3",
-        "varName": "role",
-        "name": "Add Member Role"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": ">>> ${tempVars(\"user\")} has been muted for ${tempVars(\"minutes\")} minutes from text and voice chat by ${member}",
-        "storage": "0",
-        "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
-      },
-      {
-        "time": "${tempVars(\"minutes\")}",
-        "measurement": "2",
-        "name": "Wait"
-      },
-      {
-        "member": "2",
-        "varName2": "user",
-        "role": "3",
-        "varName": "role",
-        "name": "Remove Member Role"
-      },
-      {
-        "channel": "5",
-        "varName": "user",
-        "message": ">>> Hey ${tempVars(\"user\")}! This is just a friendly reminder that you have been Unmuted in ``${tempVars(\"serverName\")}`` :D\n${member} Muted you ${tempVars(\"minutes\")} minutes ago!",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ],
-    "_id": "vIypV",
-    "comType": "0"
-  },
-  {
-    "name": "unmute",
+    "name": "reg",
     "permissions": "ADMINISTRATOR",
     "restriction": "1",
     "actions": [
+      { "storage": "0", "varName": "", "name": "Delete Message" },
       {
-        "condition": "1",
-        "comparison": "0",
-        "value": "1",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Parameters"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": ">>> Please specify a member to unmute.\n`[p]unmute [@user]`",
-        "storage": "0",
-        "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "embedTitle",
+        "name": "Store Command Params"
       },
       {
         "info": "1",
-        "find": "404-Mute",
+        "infoIndex": "2",
         "storage": "1",
-        "varName": "muted",
-        "name": "Find Role"
+        "varName": "embedMessage",
+        "name": "Store Command Params"
       },
       {
-        "member": "0",
-        "varName": "",
-        "role": "3",
-        "varName2": "muted",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check If Member has Role"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": ">>> Member is not currently muted.",
-        "storage": "0",
-        "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "member": "0",
-        "varName2": "",
-        "role": "3",
-        "varName": "muted",
-        "name": "Remove Member Role"
-      },
-      {
-        "member": "0",
-        "varName": "",
-        "info": "3",
+        "title": "Regulami",
+        "author": "",
+        "color": "8b0000",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
         "storage": "1",
-        "varName2": "member",
-        "name": "Store Member Info"
+        "varName": "sayEmbed",
+        "name": "Create Embed Message"
       },
       {
+        "storage": "1",
+        "varName": "sayEmbed",
+        "message": "${tempVars(\"embedMessage\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "sayEmbed",
         "channel": "0",
-        "varName": "",
-        "message": ">>> ${mentionedUser} has been unmuted from text and voice chat by ${member}.",
-        "storage": "0",
         "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
+        "name": "Send Embed Message"
       }
-    ],
-    "_id": "mBLWp"
+    ]
   }
 ]
