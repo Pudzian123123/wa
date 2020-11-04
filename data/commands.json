@@ -1523,5 +1523,280 @@
       }
     ],
     "_id": "wafyu"
+  },
+  {
+    "name": "addpurchase",
+    "permissions": "ADMINISTRATOR",
+    "restriction": "1",
+    "_id": "djqos",
+    "actions": [
+      {
+        "info": "1",
+        "infoIndex": "2",
+        "storage": "1",
+        "varName": "Product",
+        "name": "Store Command Params"
+      },
+      {
+        "comment": "Checking if first bought product",
+        "color": "#000000",
+        "name": "Comment"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "dataName": "PurchaseList",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "PurchaseList",
+        "name": "Store Member Data"
+      },
+      {
+        "storage": "1",
+        "varName": "PurchaseList",
+        "comparison": "7",
+        "value": "0",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "10",
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "PurchaseList",
+        "addType": "0",
+        "position": "",
+        "value": "tempVars(\"Product\")",
+        "name": "Add Item to List"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "dataName": "PurchaseList",
+        "changeType": "0",
+        "value": "tempVars(\"PurchaseList\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "**${tempVars(\"Product\")}** has been added to ${mentionedUser}.",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "First Bought:",
+        "color": "#000000",
+        "name": "Comment"
+      },
+      {
+        "storage": "1",
+        "varName": "NewList",
+        "name": "Create List"
+      },
+      {
+        "storage": "1",
+        "varName": "NewList",
+        "addType": "0",
+        "position": "",
+        "value": "tempVars(\"Product\")",
+        "name": "Add Item to List"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "dataName": "PurchaseList",
+        "changeType": "0",
+        "value": "tempVars(\"NewList\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "**${tempVars(\"Product\")}** has been added to ${mentionedUser}.",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      }
+    ]
+  },
+  {
+    "name": "purchases",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "PkVSB",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "PurchaseList",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "PurchaseList",
+        "name": "Store Member Data"
+      },
+      {
+        "comment": "Checking if customer",
+        "color": "#000000",
+        "name": "Comment"
+      },
+      {
+        "storage": "1",
+        "varName": "PurchaseList",
+        "comparison": "7",
+        "value": "0",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "9",
+        "name": "Check Variable"
+      },
+      {
+        "list": "7",
+        "varName": "PurchaseList",
+        "start": "-",
+        "middle": "",
+        "end": "\\n",
+        "storage": "1",
+        "varName2": "List",
+        "sort": "1",
+        "name": "Convert List to Text"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${member}, here are your valid purchases:\n```${tempVars(\"List\")} ```",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "Is no Customer",
+        "color": "#000000",
+        "name": "Comment"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${member}, I couldn't find any purchase from you. :{",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      }
+    ]
+  },
+  {
+    "name": "getpurchases",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "EpUPk",
+    "actions": [
+      {
+        "member": "0",
+        "varName": "",
+        "dataName": "PurchaseList",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "PurchaseList",
+        "name": "Store Member Data"
+      },
+      {
+        "comment": "Checking if customer",
+        "color": "#000000",
+        "name": "Comment"
+      },
+      {
+        "storage": "1",
+        "varName": "PurchaseList",
+        "comparison": "7",
+        "value": "0",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "9",
+        "name": "Check Variable"
+      },
+      {
+        "list": "7",
+        "varName": "PurchaseList",
+        "start": "-",
+        "middle": "",
+        "end": "\\n",
+        "storage": "1",
+        "varName2": "List",
+        "sort": "1",
+        "name": "Convert List to Text"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "here are the valid purchases from ${mentionedUser}:\n```${tempVars(\"List\")} ```",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "Is no Customer",
+        "color": "#000000",
+        "name": "Comment"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "I couldn't find any purchase from ${mentionedUser}. :{",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      }
+    ]
+  },
+  {
+    "name": "resetpurchases",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "dvEHe",
+    "actions": [
+      {
+        "member": "0",
+        "varName": "",
+        "dataName": "PurchaseList",
+        "changeType": "0",
+        "value": "0",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "All Purchases from ${mentionedUser} has been deleted.",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      }
+    ]
   }
 ]
