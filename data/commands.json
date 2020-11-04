@@ -485,344 +485,84 @@
     "comType": "0"
   },
   {
-    "name": "mute",
+    "name": "Welcomer",
     "permissions": "NONE",
-    "restriction": "1",
-    "_id": "XARJY",
+    "restriction": "0",
+    "_id": "dOJRg",
     "actions": [
       {
-        "condition": "1",
-        "comparison": "0",
-        "value": "1",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "2",
-        "name": "Check Parameters"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "Please specify a user to mute.\n`?mute [@user] [@mention]`",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "info": "1",
-        "find": "Muted",
+        "title": "Welcome",
+        "author": "",
+        "color": "32FF00",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
         "storage": "1",
-        "varName": "muted",
-        "name": "Find Role"
+        "varName": "lp",
+        "name": "Create Embed Message"
       },
       {
-        "member": "0",
-        "varName": "",
-        "role": "3",
-        "varName2": "muted",
-        "iftrue": "0",
-        "iftrueVal": "",
-        "iffalse": "3",
-        "iffalseVal": "2",
-        "name": "Check If Member has Role"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "Member is already muted.",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "member": "0",
-        "varName2": "",
-        "role": "3",
-        "varName": "muted",
-        "name": "Add Member Role"
-      },
-      {
-        "member": "0",
-        "varName": "",
-        "info": "3",
         "storage": "1",
-        "varName2": "member",
-        "name": "Store Member Info"
+        "varName": "lp",
+        "fieldName": "Setup",
+        "message": "**To Set Welcome Channel , Set The Channel's Topic As `Yo !` Please Type `Yo !` As The Channel Topic To Use This Feature**\n ",
+        "inline": "1",
+        "name": "Add Embed Field"
       },
       {
-        "channel": "0",
-        "varName": "",
-        "message": "${tempVars(\"member\")} has been muted.",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "unmute",
-    "permissions": "NONE",
-    "restriction": "1",
-    "actions": [
-      {
-        "condition": "1",
-        "comparison": "0",
-        "value": "1",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Parameters"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "Please specify a member to unmute.\n`?unmute [@user]`",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "info": "1",
-        "find": "Muted",
         "storage": "1",
-        "varName": "muted",
-        "name": "Find Role"
+        "varName": "lp",
+        "message": "Created By EL PEDRO#1004",
+        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
+        "name": "Set Embed Footer"
       },
       {
-        "member": "0",
-        "varName": "",
-        "role": "3",
-        "varName2": "muted",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check If Member has Role"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "Member is not currently muted.",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "member": "0",
-        "varName2": "",
-        "role": "3",
-        "varName": "muted",
-        "name": "Remove Member Role"
-      },
-      {
-        "member": "0",
-        "varName": "",
-        "info": "3",
         "storage": "1",
-        "varName2": "member",
-        "name": "Store Member Info"
-      },
-      {
+        "varName": "lp",
         "channel": "0",
-        "varName": "",
-        "message": "${tempVars(\"member\")} has been unmuted.",
-        "storage": "0",
         "varName2": "",
-        "name": "Send Message"
-      }
-    ],
-    "_id": "mBLWp"
-  },
-  {
-    "name": "setupmutedrole",
-    "permissions": "NONE",
-    "restriction": "1",
-    "_id": "iNywU",
-    "actions": [
-      {
-        "roleName": "Muted",
-        "hoist": "false",
-        "mentionable": "false",
-        "color": "#000001",
-        "position": "",
-        "storage": "2",
-        "varName": "mutedrole",
-        "name": "Create Role"
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
       },
       {
-        "channel": "0",
-        "varName": "",
-        "message": "`@Muted` has been created. Now establishing permissions.\n**NOTE: This may take a while depending on how many channels you have**",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "time": "5",
-        "measurement": "1",
-        "name": "Wait"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "13",
+        "title": "Leave",
+        "author": "",
+        "color": "FF0000",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
         "storage": "1",
-        "varName2": "channellist",
-        "name": "Store Server Info"
+        "varName": "llp2",
+        "name": "Create Embed Message"
       },
       {
-        "info": "1",
-        "find": "Muted",
         "storage": "1",
-        "varName": "mutedrole2",
-        "name": "Find Role"
+        "varName": "llp2",
+        "fieldName": "Welcome",
+        "message": "**To Set Leave Channel , Set The Channel's Topic As `Bye !` Please Type `Bye !` As The Channel Topic To Use This Feature**\n ",
+        "inline": "1",
+        "name": "Add Embed Field"
       },
       {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "CREATE_INSTANT_INVITE",
-        "state": "2",
-        "name": "Set Role Channel Perms"
+        "storage": "1",
+        "varName": "llp2",
+        "message": "Created By EL PEDRO#1004",
+        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
+        "name": "Set Embed Footer"
       },
       {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "MANAGE_PERMISSIONS",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "MANAGE_CHANNELS",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "MANAGE_WEBHOOKS",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "READ_MESSAGES",
-        "state": "0",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "SEND_MESSAGES",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "SEND_TTS_MESSAGES",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "MANAGE_MESSAGES",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "EMBED_LINKS",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "ATTACH_FILES",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "READ_MESSAGE_HISTORY",
-        "state": "0",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "MENTION_EVERYONE",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "USE_EXTERNAL_EMOJIS",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
-        "channel": "3",
-        "varName": "channellist",
-        "role": "3",
-        "varName2": "mutedrole2",
-        "permission": "ADD_REACTIONS",
-        "state": "2",
-        "name": "Set Role Channel Perms"
-      },
-      {
+        "storage": "1",
+        "varName": "llp2",
         "channel": "0",
-        "varName": "",
-        "message": "Permissions have been set for `@Muted`! You may now used the `?Mute` command.",
-        "storage": "0",
         "varName2": "",
-        "name": "Send Message"
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
       }
     ]
   }

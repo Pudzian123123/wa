@@ -1,189 +1,168 @@
 [
   null,
   {
-    "name": "WelcomeMessage",
-    "temp": "member",
+    "name": "Welcome",
+    "temp": "member-joined",
     "event-type": "6",
+    "_id": "GPPJC",
     "actions": [
       {
-        "channel": "7",
-        "varName": "powitania",
-        "message": "Witamy ${tempVars(\"member\")}!",
+        "info": "2",
+        "find": "Wel !",
         "storage": "1",
-        "varName2": "powitania",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "LeaveMessage",
-    "temp": "member",
-    "event-type": "7",
-    "actions": [
+        "varName": "topic-channel",
+        "name": "Find Channel"
+      },
       {
-        "channel": "7",
-        "varName": "pożegnania",
-        "message": "${tempVars(\"member\")} opuścił serwer...",
+        "server": "0",
+        "varName": "",
+        "info": "36",
         "storage": "1",
-        "varName2": "pożegnania",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "AutoResponse",
-    "temp": "msg",
-    "event-type": "2",
-    "actions": [
+        "varName2": "member-count",
+        "name": "Store Server Info"
+      },
       {
-        "message": "1",
-        "varName": "msg",
+        "server": "0",
+        "varName": "",
         "info": "2",
         "storage": "1",
-        "varName2": "text",
-        "name": "Store Message Info"
+        "varName2": "server-name",
+        "name": "Store Server Info"
+      },
+      {
+        "member": "2",
+        "varName": "member-joined",
+        "info": "2",
+        "storage": "1",
+        "varName2": "member-name",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "2",
+        "varName": "member-joined",
+        "info": "21",
+        "storage": "1",
+        "varName2": "member-creation",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "",
+        "author": "",
+        "color": "00E4FF",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "mbed",
+        "name": "Create Embed Message"
       },
       {
         "storage": "1",
-        "varName": "text",
-        "comparison": "6",
-        "value": "(hello|hey|hi)",
-        "iftrue": "0",
-        "iftrueVal": "",
-        "iffalse": "1",
-        "iffalseVal": "",
-        "name": "Check Variable"
+        "varName": "mbed",
+        "fieldName": "Welcome :hibiscus:",
+        "message": "Welcome **${tempVars(\"member-name\")}** To **${tempVars(\"server-name\")}**",
+        "inline": "1",
+        "name": "Add Embed Field"
       },
       {
-        "message": "1",
-        "varName": "msg",
-        "info": "4",
         "storage": "1",
-        "varName2": "channel",
-        "name": "Store Message Info"
+        "varName": "mbed",
+        "fieldName": "Family :sparkling_heart:",
+        "message": "Member #**${tempVars(\"member-count\")}**",
+        "inline": "1",
+        "name": "Add Embed Field"
       },
       {
+        "storage": "1",
+        "varName": "mbed",
+        "fieldName": "Account Creation Date :ringed_planet:",
+        "message": "**${tempVars(\"member-creation\")}**",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "mbed",
+        "message": "Created By El#1004",
+        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "mbed",
         "channel": "5",
-        "varName": "channel",
-        "message": "Hello!",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
+        "varName2": "topic-channel",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
       }
     ]
   },
   {
-    "name": "LevelingSystem",
-    "temp": "msg",
-    "event-type": "2",
+    "name": "Leave",
+    "temp": "member-left",
+    "event-type": "7",
+    "_id": "DQaEE",
     "actions": [
       {
-        "message": "1",
-        "varName": "msg",
-        "info": "3",
+        "info": "2",
+        "find": "Bye !",
         "storage": "1",
-        "varName2": "member",
-        "name": "Store Message Info"
+        "varName": "server-topic",
+        "name": "Find Channel"
       },
       {
         "member": "2",
-        "varName": "member",
-        "dataName": "exp",
-        "changeType": "1",
-        "value": "1",
-        "name": "Control Member Data"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "dataName": "level",
-        "defaultVal": "1",
+        "varName": "member-left",
+        "info": "2",
         "storage": "1",
-        "varName2": "myLevel",
-        "name": "Store Member Data"
+        "varName2": "left-name",
+        "name": "Store Member Info"
       },
       {
-        "member": "2",
-        "varName": "member",
-        "dataName": "exp",
-        "comparison": "1",
-        "value": "${tempVars(\"myLevel\") * 5}",
-        "iftrue": "0",
-        "iftrueVal": "",
-        "iffalse": "1",
-        "iffalseVal": "",
-        "name": "Check Member Data"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "dataName": "exp",
-        "changeType": "0",
-        "value": "0",
-        "name": "Control Member Data"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "dataName": "level",
-        "changeType": "1",
-        "value": "1",
-        "name": "Control Member Data"
-      },
-      {
-        "message": "1",
-        "varName": "msg",
-        "info": "4",
+        "server": "0",
+        "varName": "",
+        "info": "36",
         "storage": "1",
-        "varName2": "channel",
-        "name": "Store Message Info"
+        "varName2": "server-members",
+        "name": "Store Server Info"
       },
       {
-        "member": "2",
-        "varName": "member",
-        "dataName": "level",
-        "defaultVal": "1",
+        "title": "Member Left The Server",
+        "author": "",
+        "color": "FF0000",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
         "storage": "1",
-        "varName2": "myLevel",
-        "name": "Store Member Data"
+        "varName": "mbedd",
+        "name": "Create Embed Message"
       },
       {
-        "channel": "7",
-        "varName": "levele",
-        "message": "${tempVars(\"member\")} osiągnął poziom ${tempVars(\"myLevel\")}!",
         "storage": "1",
-        "varName2": "levele",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "WelcomBot",
-    "temp": "",
-    "event-type": "4",
-    "actions": [
+        "varName": "mbedd",
+        "message": "**${tempVars(\"left-name\")}** Just Left The Server \nWe Are Left With **${tempVars(\"server-members\")}** Members",
+        "name": "Set Embed Description"
+      },
       {
-        "channel": "7",
-        "varName": "powitania",
-        "message": "Bot ${mentionedUser} zagościł na serwerze.",
         "storage": "1",
-        "varName2": "powitania",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "LeaveBot",
-    "temp": "",
-    "event-type": "5",
-    "actions": [
+        "varName": "mbedd",
+        "message": "Created By El#1004",
+        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
+        "name": "Set Embed Footer"
+      },
       {
-        "channel": "7",
-        "varName": "pożegnania",
-        "message": "Bot ${mentionedUser} uciekł nie chce nam pomagać.",
         "storage": "1",
-        "varName2": "pożegnania",
-        "name": "Send Message"
+        "varName": "mbedd",
+        "channel": "5",
+        "varName2": "server-topic",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
       }
     ]
   }
