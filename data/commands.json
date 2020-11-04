@@ -485,391 +485,345 @@
     "comType": "0"
   },
   {
-    "name": "tempmute",
+    "name": "mute",
     "permissions": "NONE",
     "restriction": "1",
-    "_id": "QvzzS",
+    "_id": "XARJY",
     "actions": [
       {
-        "role": "3",
-        "varName": "» Bot Dev",
-        "info": "11",
-        "storage": "1",
-        "varName2": "Admin role",
-        "name": "Store Role Info"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "1",
-        "storage": "1",
-        "varName2": "ID",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "permission": "ADMINISTRATOR",
-        "iftrue": "2",
-        "iftrueVal": "12",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Member Permissions"
-      },
-      {
-        "title": "ERROR",
-        "author": "",
-        "color": "RED",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "errorembed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "errorembed",
-        "message": "❌ | <@${tempVars(\"ID\")}> You do not have permission to run the following command",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "errorembed",
-        "channel": "0",
-        "varName2": "",
-        "storage3": "1",
-        "varName3": "Deleteembed1",
-        "name": "Send Embed Message"
-      },
-      {
-        "time": "2",
-        "measurement": "1",
-        "name": "Wait"
-      },
-      {
-        "storage": "0",
-        "varName": "",
-        "reason": "",
-        "name": "Delete Message"
-      },
-      {
-        "time": "190",
-        "measurement": "0",
-        "name": "Wait"
-      },
-      {
-        "storage": "1",
-        "varName": "Deleteembed1",
-        "reason": "",
-        "name": "Delete Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "condition": "0",
+        "condition": "1",
         "comparison": "0",
-        "value": "2",
-        "iftrue": "2",
-        "iftrueVal": "17",
+        "value": "1",
+        "iftrue": "3",
+        "iftrueVal": "2",
         "iffalse": "0",
-        "iffalseVal": "",
+        "iffalseVal": "2",
         "name": "Check Parameters"
       },
       {
-        "title": "ERROR",
-        "author": "",
-        "color": "RED",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "NOPARAEMBED",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "NOPARAEMBED",
-        "message": "❌ | Error Follow format ``/mute`` ``@user`` ``Time (Minutes)`` ",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "NOPARAEMBED",
         "channel": "0",
+        "varName": "",
+        "message": "Please specify a user to mute.\n`?mute [@user] [@mention]`",
+        "storage": "0",
         "varName2": "",
-        "storage3": "1",
-        "varName3": "Deleteembed2",
-        "name": "Send Embed Message"
+        "name": "Send Message"
       },
       {
         "name": "End Action Sequence"
       },
       {
-        "info": "0",
-        "find": "730756245476212767",
+        "info": "1",
+        "find": "Muted",
         "storage": "1",
-        "varName": "muterole",
+        "varName": "muted",
         "name": "Find Role"
       },
       {
         "member": "0",
         "varName": "",
         "role": "3",
-        "varName2": "muterole",
-        "iftrue": "2",
-        "iftrueVal": "35",
-        "iffalse": "0",
-        "iffalseVal": "35",
+        "varName2": "muted",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "3",
+        "iffalseVal": "2",
         "name": "Check If Member has Role"
       },
       {
-        "member": "0",
-        "varName": "",
-        "info": "9",
-        "varName2": "",
-        "iftrue": "2",
-        "iftrueVal": "40",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check If Member"
-      },
-      {
-        "member": "0",
-        "varName": "",
-        "info": "0",
-        "varName2": "",
-        "iftrue": "2",
-        "iftrueVal": "45",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check If Member"
-      },
-      {
-        "message": "0",
-        "varName": "",
-        "info": "0",
-        "ParamN": "2",
-        "separator": "",
-        "storage": "1",
-        "varName2": "timeinmins",
-        "count": "",
-        "name": "Store Message Params"
-      },
-      {
-        "message": "0",
-        "varName": "",
-        "info": "0",
-        "ParamN": "1",
-        "separator": "",
-        "storage": "1",
-        "varName2": "mutedmemberid",
-        "count": "",
-        "name": "Store Message Params"
-      },
-      {
-        "title": "",
-        "author": "",
-        "color": "GREEN",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "mutedembedsucess",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "mutedembedsucess",
-        "message": "✅ | Successfully muted ${tempVars(\"mutedmemberid\")} for ${tempVars(\"timeinmins\")} minute(s)",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "mutedembedsucess",
         "channel": "0",
+        "varName": "",
+        "message": "Member is already muted.",
+        "storage": "0",
         "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
       },
       {
         "member": "0",
         "varName2": "",
         "role": "3",
-        "varName": "muterole",
-        "reason": "",
+        "varName": "muted",
         "name": "Add Member Role"
       },
       {
         "member": "0",
         "varName": "",
-        "mute": "0",
-        "reason": "",
-        "name": "Set Member Mute"
-      },
-      {
-        "storage": "0",
-        "varName": "",
-        "reason": "",
-        "name": "Delete Message"
-      },
-      {
+        "info": "3",
         "storage": "1",
-        "varName": "mutedembedsucess",
-        "reason": "",
-        "name": "Delete Message"
+        "varName2": "member",
+        "name": "Store Member Info"
       },
       {
-        "time": "${tempVars(\"timeinmins\")}",
-        "measurement": "2",
-        "name": "Wait"
+        "channel": "0",
+        "varName": "",
+        "message": "${tempVars(\"member\")} has been muted.",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ]
+  },
+  {
+    "name": "unmute",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "3",
+        "iftrueVal": "2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Parameters"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Please specify a member to unmute.\n`?unmute [@user]`",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "info": "1",
+        "find": "Muted",
+        "storage": "1",
+        "varName": "muted",
+        "name": "Find Role"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "role": "3",
+        "varName2": "muted",
+        "iftrue": "3",
+        "iftrueVal": "2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check If Member has Role"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Member is not currently muted.",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
       },
       {
         "member": "0",
         "varName2": "",
         "role": "3",
-        "varName": "muterole",
-        "reason": "",
+        "varName": "muted",
         "name": "Remove Member Role"
       },
       {
         "member": "0",
         "varName": "",
-        "mute": "1",
-        "reason": "",
-        "name": "Set Member Mute"
+        "info": "3",
+        "storage": "1",
+        "varName2": "member",
+        "name": "Store Member Info"
       },
       {
-        "title": "",
-        "author": "",
-        "color": "GREEN",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "unmuteembed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "unmuteembed",
-        "message": "✅ | ${tempVars(\"mutedmemberid\")} You have been un-muted behave... 😉",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "unmuteembed",
         "channel": "0",
+        "varName": "",
+        "message": "${tempVars(\"member\")} has been unmuted.",
+        "storage": "0",
         "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "title": "ERROR",
-        "author": "",
-        "color": "RED",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "membermurtedalreadyembed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "membermurtedalreadyembed",
-        "message": "❌ | ${mentionedUser} Is already muted",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "membermurtedalreadyembed",
-        "channel": "0",
-        "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "title": "ERROR",
-        "author": "",
-        "color": "RED",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embedformuteself",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embedformuteself",
-        "message": "❌ | Why would you want to mute yourself?",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "embedformuteself",
-        "channel": "0",
-        "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "title": "ERROR",
-        "author": "",
-        "color": "RED",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "botmuteembed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "botmuteembed",
-        "message": "❌ | Not letting you do that mate... :wink:",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "botmuteembed",
-        "channel": "0",
-        "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
+        "name": "Send Message"
       }
     ],
-    "comType": "0",
-    "_aliases": ["temp"]
+    "_id": "mBLWp"
+  },
+  {
+    "name": "setupmutedrole",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "iNywU",
+    "actions": [
+      {
+        "roleName": "Muted",
+        "hoist": "false",
+        "mentionable": "false",
+        "color": "#000001",
+        "position": "",
+        "storage": "2",
+        "varName": "mutedrole",
+        "name": "Create Role"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "`@Muted` has been created. Now establishing permissions.\n**NOTE: This may take a while depending on how many channels you have**",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "time": "5",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "13",
+        "storage": "1",
+        "varName2": "channellist",
+        "name": "Store Server Info"
+      },
+      {
+        "info": "1",
+        "find": "Muted",
+        "storage": "1",
+        "varName": "mutedrole2",
+        "name": "Find Role"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "CREATE_INSTANT_INVITE",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "MANAGE_PERMISSIONS",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "MANAGE_CHANNELS",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "MANAGE_WEBHOOKS",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "READ_MESSAGES",
+        "state": "0",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "SEND_MESSAGES",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "SEND_TTS_MESSAGES",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "MANAGE_MESSAGES",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "EMBED_LINKS",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "ATTACH_FILES",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "READ_MESSAGE_HISTORY",
+        "state": "0",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "MENTION_EVERYONE",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "USE_EXTERNAL_EMOJIS",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "channellist",
+        "role": "3",
+        "varName2": "mutedrole2",
+        "permission": "ADD_REACTIONS",
+        "state": "2",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Permissions have been set for `@Muted`! You may now used the `?Mute` command.",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ]
   }
 ]
