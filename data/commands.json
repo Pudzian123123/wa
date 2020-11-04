@@ -482,36 +482,6 @@
         "name": "Send Message"
       }
     ],
-    "comType": "0",
-    "actions": [
-      {
-        "title": "Mod",
-        "author": "",
-        "color": "#ff0000",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embded",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
-        "fieldName": "${mentionedUser} został zbanowany\n",
-        "message": "",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embded",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      }
-    ]
+    "comType": "0"
   }
 ]
