@@ -29,5 +29,56 @@
         "name": "Send Message"
       }
     ]
+  },
+  {
+    "name": "UserJoin",
+    "temp": "gracz",
+    "event-type": "6",
+    "_id": "rbHCz",
+    "actions": [
+      {
+        "info": "0",
+        "find": "771113768028471296",
+        "storage": "1",
+        "varName": "kanał",
+        "name": "Find Channel"
+      },
+      {
+        "member": "2",
+        "varName": "gracz",
+        "info": "16",
+        "storage": "1",
+        "varName2": "awatar",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "Witaj!",
+        "author": "",
+        "color": "#19becc",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "${tempVars(\"awatar\")}",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "witaj",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "witaj",
+        "message": "Hej **${tempVars(\"gracz\")}**!",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "witaj",
+        "channel": "5",
+        "varName2": "kanał",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ]
   }
 ]
