@@ -485,7 +485,7 @@
     "comType": "0"
   },
   {
-    "name": "mcaccount",
+    "name": "mc",
     "permissions": "NONE",
     "restriction": "1",
     "_id": "RQILk",
