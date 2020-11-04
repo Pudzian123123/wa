@@ -1524,43 +1524,79 @@
     ],
     "_id": "wafyu"
   },
-  {
-  "name": "Welcomer",
+  ==================================================================================
+(p)warny [LISTA WARNÓW]
+==================================================================================
+{
+  "name": "warny",
   "permissions": "NONE",
-  "restriction": "0",
-  "_id": "dOJRg",
+  "restriction": "1",
+  "_id": "GBcCi",
   "actions": [
     {
-      "title": "Welcome",
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "warns",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "warny",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Ilość **Ostrzeżeń**:\nUżytkownika: ${member}\nWynosi: ${tempVars(\"warny\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "KICK_MEMBERS",
+      "iftrue": "2",
+      "iftrueVal": "10",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "**Brak Uprawnień**",
       "author": "",
-      "color": "32FF00",
-      "timestamp": "true",
+      "color": "",
+      "timestamp": "false",
       "url": "",
       "authorIcon": "",
       "imageUrl": "",
       "thumbUrl": "",
       "storage": "1",
-      "varName": "lp",
+      "varName": "embed.fail.permissions",
       "name": "Create Embed Message"
     },
     {
       "storage": "1",
-      "varName": "lp",
-      "fieldName": "Setup",
-      "message": "**To Set Welcome Channel , Set The Channel's Topic As `Yo !` Please Type `Yo !` As The Channel Topic To Use This Feature**\n ",
-      "inline": "1",
-      "name": "Add Embed Field"
+      "varName": "embed.fail.permissions",
+      "message": "Nie posiadasz uprawnień do sprawdzania ilości ostrzeżeń innych użytkowników!\nAby sprawdzić swoje warny napisz: !Ostrzeżenia",
+      "name": "Set Embed Description"
     },
     {
       "storage": "1",
-      "varName": "lp",
-      "message": "Created By EL PEDRO#1004",
-      "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-      "name": "Set Embed Footer"
-    },
-    {
-      "storage": "1",
-      "varName": "lp",
+      "varName": "embed.fail.permissions",
       "channel": "0",
       "varName2": "",
       "storage3": "0",
@@ -1568,36 +1604,175 @@
       "name": "Send Embed Message"
     },
     {
-      "title": "Leave",
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "warny",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Ilość **Ostrzeżeń**:\nUżytkownika: ${mentionedUser}\nWynosi: ${tempVars(\"warny\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "_aliases": [
+    "ilośćwarnów",
+    "iloścwarnów"
+  ]
+},
+{
+  "name": "warny",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "GBcCi",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "warns",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "warny",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Ilość **Ostrzeżeń**:\nUżytkownika: ${member}\nWynosi: ${tempVars(\"warny\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "KICK_MEMBERS",
+      "iftrue": "2",
+      "iftrueVal": "10",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "**Brak Uprawnień**",
       "author": "",
-      "color": "FF0000",
-      "timestamp": "true",
+      "color": "",
+      "timestamp": "false",
       "url": "",
       "authorIcon": "",
       "imageUrl": "",
       "thumbUrl": "",
       "storage": "1",
-      "varName": "llp2",
+      "varName": "embed.fail.permissions",
       "name": "Create Embed Message"
     },
     {
       "storage": "1",
-      "varName": "llp2",
-      "fieldName": "Welcome",
-      "message": "**To Set Leave Channel , Set The Channel's Topic As `Bye !` Please Type `Bye !` As The Channel Topic To Use This Feature**\n ",
-      "inline": "1",
-      "name": "Add Embed Field"
+      "varName": "embed.fail.permissions",
+      "message": "Nie posiadasz uprawnień do sprawdzania ilości ostrzeżeń innych użytkowników!\nAby sprawdzić swoje warny napisz: !Ostrzeżenia",
+      "name": "Set Embed Description"
     },
     {
       "storage": "1",
-      "varName": "llp2",
-      "message": "Created By EL PEDRO#1004",
-      "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-      "name": "Set Embed Footer"
+      "varName": "embed.fail.permissions",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "warny",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Ilość **Ostrzeżeń**:\nUżytkownika: ${mentionedUser}\nWynosi: ${tempVars(\"warny\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "_aliases": [
+    "ilośćwarnów",
+    "iloścwarnów"
+  ]
+},
+{
+  "name": "usunwarn",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "0",
+  "_id": "aCJdX",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "awatar",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "**POMYŚLNIE ZRESETOWANO!**",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"awatar\")}",
+      "storage": "1",
+      "varName": "zresetowano0",
+      "name": "Create Embed Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
     },
     {
       "storage": "1",
-      "varName": "llp2",
+      "varName": "zresetowano0",
       "channel": "0",
       "varName2": "",
       "storage3": "0",
