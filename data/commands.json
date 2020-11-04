@@ -379,92 +379,6 @@
     ]
   },
   {
-    "name": "ban",
-    "permissions": "BAN_MEMBERS",
-    "restriction": "1",
-    "actions": [
-      {
-        "title": "Aven Studios",
-        "author": "",
-        "color": "#ff0000",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "embed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "fieldName": "You have been **banned** from Aven Studios.",
-        "message": "If you feel this was false, please DM fuzix#0001.",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "channel": "2",
-        "varName2": "",
-        "name": "Send Embed Message"
-      },
-      {
-        "member": "0",
-        "varName": "",
-        "reason": "",
-        "name": "Ban Member"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "16",
-        "storage": "1",
-        "varName2": "avatar",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "user",
-        "name": "Store Member Info"
-      },
-      {
-        "title": "",
-        "author": "${tempVars(\"user\")}",
-        "color": "#0080FF",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "${tempVars(\"avatar\")}",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "send",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "send",
-        "fieldName": "Ban",
-        "message": ":white_check_mark: | ${mentionedUser} has been **banned**!",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "send",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      }
-    ],
-    "_id": "jyNvt"
-  },
-  {
     "name": "kick",
     "permissions": "KICK_MEMBERS",
     "restriction": "1",
@@ -492,7 +406,7 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "Please mention a user!",
+        "message": "```Właściwe zastosowanie +kick (@user)```",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -509,12 +423,95 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "${mentionedUser} has been kicked\n",
+        "message": "```${mentionedUser} został wyrzucony\n```",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
       }
     ],
     "comType": "0"
+  },
+  {
+    "name": "ban",
+    "permissions": "BAN_MEMBERS",
+    "restriction": "1",
+    "_id": "wHFJT",
+    "actions": [
+      {
+        "message": "0",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "msg",
+        "name": "Store Message Info"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "comparison": "5",
+        "value": "@",
+        "iftrue": "3",
+        "iftrueVal": "2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "```Właściwe zastosowanie +ban (@user)```",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "reason": "",
+        "name": "Ban Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "```${mentionedUser} został zbanowany\n```",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "0",
+    "actions": [
+      {
+        "title": "Mod",
+        "author": "",
+        "color": "#ff0000",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embded",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "fieldName": "${mentionedUser} został zbanowany\n",
+        "message": "",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embded",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+      }
+    ]
   }
 ]
