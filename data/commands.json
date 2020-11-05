@@ -1430,102 +1430,189 @@
     ]
   },
   {
-    "name": "weryfikacja",
-    "temp": "user",
-    "event-type": "6",
-    "_id": "yDTlj",
+    "name": "serwery",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "cogao",
     "actions": [
       {
-        "info": "0",
-        "find": "748349761878360205",
+        "input": "",
+        "format": ".txt",
+        "filename": "zapro",
+        "filepath": "./serwy/",
+        "filetask": "1",
+        "name": "File Control"
+      },
+      {
+        "storage": "4",
+        "varName": "",
+        "storage2": "1",
+        "varName2": "serwery-bota",
+        "name": "Shuffle List"
+      },
+      {
+        "list": "7",
+        "varName": "serwery-bota",
+        "getType": "0",
+        "position": "",
         "storage": "1",
-        "varName": "channelid",
+        "varName2": "serwer",
+        "name": "Get Item from List"
+      },
+      {
+        "server": "1",
+        "varName": "serwer",
+        "name": "Change Server"
+      },
+      {
+        "channel": "2",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "id",
+        "name": "Store Channel Info"
+      },
+      {
+        "info": "0",
+        "find": "${tempVars(\"id\")}",
+        "storage": "1",
+        "varName": "kanał",
         "name": "Find Channel"
       },
       {
+        "server": "0",
+        "varName": "",
         "storage": "1",
-        "varName": "kod",
-        "min": "1000",
-        "max": "9999",
-        "name": "Generate Random Number"
+        "varName2": "bot",
+        "name": "Get Bot as Member"
       },
       {
-        "channel": "5",
-        "varName": "channelid",
-        "message": "Przepisz `KOD` **${tempVars(\"kod\")}**",
-        "storage": "0",
-        "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
-      },
-      {
-        "storage": "3",
-        "varName": "channelid",
-        "filter": "content.includes('')",
-        "max": "1",
-        "time": "60000",
-        "storage2": "1",
-        "varName2": "odp",
+        "member": "2",
+        "varName": "bot",
+        "permission": "CREATE_INSTANT_INVITE",
         "iftrue": "0",
         "iftrueVal": "",
-        "iffalse": "1",
-        "iffalseVal": "",
-        "name": "Await Response Call Action"
+        "iffalse": "3",
+        "iffalseVal": "5",
+        "name": "Check Member Permissions"
+      },
+      {
+        "channel": "3",
+        "varName": "kanał",
+        "maxUses": "",
+        "lifetime": "",
+        "tempInvite": "false",
+        "unique": "true",
+        "storage": "1",
+        "varName2": "link",
+        "name": "Create Invite"
+      },
+      {
+        "invite": "${tempVars(\"link\")}",
+        "info": "4",
+        "storage": "1",
+        "varName": "s",
+        "name": "Store Invite Info"
       },
       {
         "storage": "1",
-        "varName": "odp",
+        "varName": "serwer",
         "comparison": "1",
-        "value": "tempVars(\"kod\")",
-        "iftrue": "2",
-        "iftrueVal": "9",
-        "iffalse": "0",
-        "iffalseVal": "8",
+        "value": "tempVars(\"s\")",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "14",
         "name": "Check Variable"
       },
       {
-        "member": "2",
-        "varName": "user",
-        "reason": "Wpisałeś zły kod weryfikacji! Dołącz ponownie na server i spróbuj jeszcze raz! discord.gg/4FpKEVG",
-        "name": "Kick Member"
+        "input": "[${tempVars(\"serwer\")}](${tempVars(\"link\")})\n",
+        "format": ".txt",
+        "filename": "zapro",
+        "filepath": "./serwy/",
+        "filetask": "2",
+        "name": "File Control"
       },
       {
-        "channel": "5",
-        "varName": "user",
-        "message": "Wpisałeś zły kod weryfikacji! Dołącz ponownie na server i spróbuj jeszcze raz!",
-        "storage": "0",
-        "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
+        "count": "1",
+        "name": "Skip Actions"
       },
       {
-        "name": "End Action Sequence"
+        "input": "${tempVars(\"serwer\")}\n",
+        "format": ".txt",
+        "filename": "zapro",
+        "filepath": "./serwy/",
+        "filetask": "2",
+        "name": "File Control"
       },
       {
-        "info": "0",
-        "find": "748348187516862606",
+        "list": "7",
+        "varName": "serwery-bota",
         "storage": "1",
-        "varName": "role",
-        "name": "Find Role"
+        "varName2": "liczba1",
+        "name": "Get List Length"
       },
       {
-        "member": "2",
-        "varName2": "user",
-        "role": "3",
-        "varName": "role",
-        "name": "Add Member Role"
-      },
-      {
-        "channel": "4",
-        "varName": "",
-        "message": "kox",
-        "storage": "0",
+        "storage": "1",
+        "varName": "serwery-bota",
+        "removeType": "1",
+        "position": "",
+        "storage2": "0",
         "varName2": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Send Message"
+        "name": "Remove Item from List"
+      },
+      {
+        "storage": "1",
+        "varName": "liczba1",
+        "comparison": "1",
+        "value": "1",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "3",
+        "name": "Check Variable"
+      },
+      {
+        "filename": "./serwy/zapro.txt",
+        "storage": "1",
+        "varName2": "txt",
+        "name": "Read File"
+      },
+      {
+        "title": "Serwery",
+        "author": "",
+        "color": "RANDOM",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "${tempVars(\"txt\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
       }
     ]
   }
