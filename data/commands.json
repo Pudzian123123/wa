@@ -1428,5 +1428,25 @@
         "name": "Send Message"
       }
     ]
+  },
+  {
+    "name": "nadaj",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "fYbhr",
+    "actions": [
+      {
+        "storage": "0",
+        "varName": "",
+        "name": "Delete Message"
+      },
+      {
+        "member": "0",
+        "varName2": "",
+        "role": "0",
+        "varName": "Zweryfikowany",
+        "name": "Add Member Role"
+      }
+    ]
   }
 ]
