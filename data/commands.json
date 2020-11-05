@@ -1605,5 +1605,256 @@
         "name": "Send Embed Message"
       }
     ]
+  },
+  {
+    "name": "ip",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "vNXqY",
+    "actions": [
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "35",
+        "name": "Check Parameters"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Obliczanie IP.",
+        "storage": "1",
+        "varName2": "msg-ip",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "changeType": "1",
+        "value": "1",
+        "storage": "1",
+        "varName": "ip-razy",
+        "name": "Control Variable"
+      },
+      {
+        "time": "1",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "Obliczanie IP ..",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "1",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "Obliczanie IP ...",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "1",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "Obliczanie IP .",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-razy",
+        "comparison": "1",
+        "value": "3",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "3",
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-dyn",
+        "min": "1",
+        "max": "2",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-dyn",
+        "comparison": "1",
+        "value": "1",
+        "iftrue": "2",
+        "iftrueVal": "15",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-dyn",
+        "comparison": "1",
+        "value": "2",
+        "iftrue": "2",
+        "iftrueVal": "31",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "${mentionedUser} ma IP dynamiczne, więc może się zmieniać.",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "3",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-1",
+        "min": "1",
+        "max": "255",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-2",
+        "min": "1",
+        "max": "255",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-3",
+        "min": "1",
+        "max": "255",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "ip-4",
+        "min": "1",
+        "max": "255",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "IPv4 użytkownika ${mentionedUser} to XXX.XXX.XXX.XXX",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "2",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "IPv4 użytkownika ${mentionedUser} to ${tempVars(\"ip-1\")}.XXX.XXX.XXX",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "1",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "IPv4 użytkownika ${mentionedUser} to ${tempVars(\"ip-1\")}.${tempVars(\"ip-2\")}.XXX.XXX",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "2",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "IPv4 użytkownika ${mentionedUser} to ${tempVars(\"ip-1\")}.${tempVars(\"ip-2\")}.${tempVars(\"ip-3\")}.XXX",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "1",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "IPv4 użytkownika ${mentionedUser} to ${tempVars(\"ip-1\")}.${tempVars(\"ip-2\")}.${tempVars(\"ip-3\")}.${tempVars(\"ip-4\")}",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "1",
+        "varName": "msg-ip",
+        "message": "${mentionedUser} ma normalne IP więc nie zmieni się, ale używa firewalla i IP może być podstawione.",
+        "storage2": "1",
+        "varName2": "",
+        "name": "Edit Message"
+      },
+      {
+        "time": "3",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "call": "16",
+        "name": "Jump to Action"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": ":x:! Musisz podać kogo IP mam obliczyć!",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      }
+    ]
   }
 ]
