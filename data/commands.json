@@ -1523,5 +1523,87 @@
       }
     ],
     "_id": "wafyu"
+  },
+  {
+    "name": "Welcomer",
+    "permissions": "NONE",
+    "restriction": "0",
+    "_id": "dOJRg",
+    "actions": [
+      {
+        "title": "Welcome",
+        "author": "",
+        "color": "32FF00",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "lp",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "lp",
+        "fieldName": "Setup",
+        "message": "**To Set Welcome Channel , Set The Channel's Topic As `Yo !` Please Type `Yo !` As The Channel Topic To Use This Feature**\n ",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "lp",
+        "message": "Created By EL PEDRO#1004",
+        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "lp",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "title": "Leave",
+        "author": "",
+        "color": "FF0000",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "llp2",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "llp2",
+        "fieldName": "Welcome",
+        "message": "**To Set Leave Channel , Set The Channel's Topic As `Bye !` Please Type `Bye !` As The Channel Topic To Use This Feature**\n ",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "llp2",
+        "message": "Created By EL PEDRO#1004",
+        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "llp2",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ]
   }
 ]
