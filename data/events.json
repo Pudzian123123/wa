@@ -246,5 +246,96 @@
         "name": "Send Embed Message"
       }
     ]
+  },
+  {
+    "name": "WelcomeEvent",
+    "temp": "memberJoined",
+    "event-type": "6",
+    "actions": [
+      {
+        "info": "1",
+        "find": "welcome",
+        "storage": "1",
+        "varName": "welcomeChannel",
+        "name": "Find Channel"
+      },
+      {
+        "storage": "1",
+        "varName": "welcomeChannel",
+        "comparison": "0",
+        "value": "",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "1",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "serverName",
+        "name": "Store Server Info"
+      },
+      {
+        "member": "2",
+        "varName": "memberJoined",
+        "info": "16",
+        "storage": "1",
+        "varName2": "avatarurl",
+        "name": "Store Member Info"
+      },
+      {
+        "channel": "5",
+        "varName": "welcomeChannel",
+        "message": "${tempVars(\"memberJoined\")}",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "title": "",
+        "author": "Welcome!",
+        "color": "RANDOM",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "${tempVars(\"avatarurl\")}",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "${tempVars(\"memberJoined\")}, Welcome to **${tempVars(\"serverName\")}**\nEnjoy your stay.",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "5",
+        "varName2": "welcomeChannel",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
+        "name": "Send Embed Message"
+      }
+    ]
   }
 ]
