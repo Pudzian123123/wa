@@ -420,7 +420,7 @@
       {
         "channel": "2",
         "varName": "",
-        "message": "${mentionedUser} zostałeś/aś wyrzucony/na",
+        "message": "${mentionedUser} zostałeś/aś wyrzucony/a",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -434,7 +434,7 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "${mentionedUser} został/a wyrzucony\na",
+        "message": "${mentionedUser} został/a wyrzucony/a",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -481,7 +481,7 @@
       {
         "channel": "2",
         "varName": "",
-        "message": "${mentionedUser} zostałeś/aś zbanowany/na",
+        "message": "${mentionedUser} zostałeś/aś zbanowany/a",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -495,7 +495,7 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "${mentionedUser} został/a zbanowany\na",
+        "message": "${mentionedUser} został/a zbanowany/a",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -536,7 +536,7 @@
         "storage": "1",
         "varName": "embederror",
         "fieldName": "Fatal error!",
-        "message": "Give us a valid Minecraft nickname... ",
+        "message": "Podaj nam prawidłowy pseudonim Minecraft... ",
         "inline": "1",
         "name": "Add Embed Field"
       },
