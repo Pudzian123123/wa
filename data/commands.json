@@ -1437,7 +1437,7 @@
     "actions": [
       {
         "info": "1",
-        "find": "Zweryfikowany",
+        "find": "✅ Zweryfikowany",
         "storage": "1",
         "varName": "Role",
         "name": "Find Role"
