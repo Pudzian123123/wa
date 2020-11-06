@@ -423,7 +423,15 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "```${mentionedUser} został wyrzucony\n```",
+        "message": "${mentionedUser} został/a wyrzucony\na",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "channel": "2",
+        "varName": "",
+        "message": "${mentionedUser} zostałeś/aś wyrzucony/na",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -476,7 +484,15 @@
       {
         "channel": "0",
         "varName": "",
-        "message": "```${mentionedUser} został zbanowany\n```",
+        "message": "${mentionedUser} został/a zbanowany\na",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "channel": "2",
+        "varName": "",
+        "message": "${mentionedUser} zostałeś/aś zbanowany/na",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
