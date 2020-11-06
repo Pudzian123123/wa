@@ -517,5 +517,173 @@
         "name": "Send Message"
       }
     ]
+  },
+  {
+    "name": "JOIN",
+    "temp": "NEW-MEMBER",
+    "event-type": "6",
+    "_id": "aCMtj",
+    "actions": [
+      {
+        "server": "0",
+        "varName": "",
+        "info": "35",
+        "storage": "1",
+        "varName2": "count",
+        "name": "Store Server Info"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "5",
+        "storage": "1",
+        "varName2": "icon",
+        "name": "Store Server Info"
+      },
+      {
+        "member": "2",
+        "varName": "NEW-MEMBER",
+        "info": "2",
+        "storage": "1",
+        "varName2": "username",
+        "name": "Store Member Info"
+      },
+      {
+        "comment": "CHANNEL NAME There",
+        "color": "#60ff00",
+        "name": "Comment"
+      },
+      {
+        "info": "1",
+        "find": "👋-powitania",
+        "storage": "1",
+        "varName": "dsl",
+        "name": "Find Channel"
+      },
+      {
+        "comment": "CHANNEL NAME There",
+        "color": "#60ff00",
+        "name": "Comment"
+      },
+      {
+        "title": "Welcome!",
+        "author": "",
+        "color": "00AAFF",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "${tempVars(\"icon\")}",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "${tempVars(\"NEW-MEMBER\")} **you are our** ${tempVars(\"count\")} **member on server!\nHope you have a good time on this Discord!**",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "💬",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "5",
+        "varName2": "dsl",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ]
+  },
+  {
+    "name": "Leave",
+    "temp": "last-MEMBER",
+    "event-type": "0",
+    "_id": "cYFGn",
+    "actions": [
+      {
+        "server": "0",
+        "varName": "",
+        "info": "35",
+        "storage": "1",
+        "varName2": "count",
+        "name": "Store Server Info"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "5",
+        "storage": "1",
+        "varName2": "icon",
+        "name": "Store Server Info"
+      },
+      {
+        "member": "2",
+        "varName": "NEW-MEMBER",
+        "info": "2",
+        "storage": "1",
+        "varName2": "username",
+        "name": "Store Member Info"
+      },
+      {
+        "comment": "Channel name THERe",
+        "color": "#0dff00",
+        "name": "Comment"
+      },
+      {
+        "info": "1",
+        "find": "👋-pożegnania",
+        "storage": "1",
+        "varName": "dsl",
+        "name": "Find Channel"
+      },
+      {
+        "comment": "Channel name THERe",
+        "color": "#0dff00",
+        "name": "Comment"
+      },
+      {
+        "title": "Good-Bye!",
+        "author": "",
+        "color": "ff2a00",
+        "timestamp": "true",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "${tempVars(\"icon\")}",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "${tempVars(\"last-MEMBER\")} left, we are now **${tempVars(\"count\")}** member on server.",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "💬",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "4",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ]
   }
 ]
