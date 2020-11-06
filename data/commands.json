@@ -243,8 +243,11 @@
         "varName2": "",
         "name": "Send Message"
       },
-      { "storage": "0", "varName": "", "name": "Delete Message" },
-      { "storage": "0", "varName": "", "name": "Delete Message" }
+      {
+        "storage": "0",
+        "varName": "Wyczyszczono Czat",
+        "name": "Delete Message"
+      }
     ]
   },
   {
@@ -415,6 +418,14 @@
         "name": "End Action Sequence"
       },
       {
+        "channel": "2",
+        "varName": "",
+        "message": "${mentionedUser} zostałeś/aś wyrzucony/na",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
         "member": "0",
         "varName": "",
         "reason": "",
@@ -424,14 +435,6 @@
         "channel": "0",
         "varName": "",
         "message": "${mentionedUser} został/a wyrzucony\na",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "channel": "2",
-        "varName": "",
-        "message": "${mentionedUser} zostałeś/aś wyrzucony/na",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
@@ -476,6 +479,14 @@
         "name": "End Action Sequence"
       },
       {
+        "channel": "2",
+        "varName": "",
+        "message": "${mentionedUser} zostałeś/aś zbanowany/na",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
         "member": "0",
         "varName": "",
         "reason": "",
@@ -485,14 +496,6 @@
         "channel": "0",
         "varName": "",
         "message": "${mentionedUser} został/a zbanowany\na",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "channel": "2",
-        "varName": "",
-        "message": "${mentionedUser} zostałeś/aś zbanowany/na",
         "storage": "0",
         "varName2": "",
         "name": "Send Message"
