@@ -1430,22 +1430,118 @@
     ]
   },
   {
-    "name": "nadaj",
+    "name": "verify",
     "permissions": "NONE",
     "restriction": "1",
-    "_id": "fYbhr",
+    "_id": "xCCiD",
     "actions": [
       {
-        "storage": "0",
-        "varName": "",
-        "name": "Delete Message"
+        "info": "1",
+        "find": "Zweryfikowany",
+        "storage": "1",
+        "varName": "Role",
+        "name": "Find Role"
       },
       {
-        "member": "0",
+        "member": "1",
+        "varName": "",
+        "role": "3",
+        "varName2": "Role",
+        "iftrue": "2",
+        "iftrueVal": "8",
+        "iffalse": "2",
+        "iffalseVal": "3",
+        "name": "Check If Member has Role"
+      },
+      {
+        "member": "1",
         "varName2": "",
-        "role": "0",
-        "varName": "Zweryfikowany",
+        "role": "3",
+        "varName": "Role",
         "name": "Add Member Role"
+      },
+      {
+        "title": "VERIFIED",
+        "author": "",
+        "color": "#00ff1a",
+        "url": "https://imcoolbrogg.wixsite.com/bots",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "Embed message",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "Embed message",
+        "message": "You have been verified ${member}!",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "Embed message",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "title": "ERROR",
+        "author": "",
+        "color": "#ff0004",
+        "url": "https://imcoolbrogg.wixsite.com/bots",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "Embed 2",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "Embed 2",
+        "message": "You are already verified if this is a error please contact support on are server https://discord.gg/qWvmuSS .",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "Embed 2",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "messageContent": "",
+        "name": "Send Embed Message"
       }
     ]
   }
