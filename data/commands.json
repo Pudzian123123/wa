@@ -2078,5 +2078,189 @@
       }
     ],
     "_id": "SBtbh"
+  },
+  {
+    "name": "SetLogs",
+    "permissions": "ADMINISTRATOR",
+    "restriction": "1",
+    "_id": "iQoFL",
+    "actions": [
+      {
+        "comment": "CHECKS",
+        "color": "#ffff00",
+        "name": "Comment"
+      },
+      {
+        "condition": "0",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "7",
+        "name": "Check Parameters"
+      },
+      {
+        "message": "0",
+        "varName": "",
+        "info": "5",
+        "ParamN": "1",
+        "separator": "",
+        "storage": "1",
+        "varName2": "log_channel",
+        "name": "Store Message Params"
+      },
+      {
+        "channel": "3",
+        "varName": "log_channel",
+        "info": "1",
+        "storage": "1",
+        "varName2": "Channel_ID",
+        "name": "Store Channel Info"
+      },
+      {
+        "call": "16",
+        "name": "Jump to Action"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "ERROR MESSAGE",
+        "color": "#ff0000",
+        "name": "Comment"
+      },
+      {
+        "title": "ERROR",
+        "author": "",
+        "color": "RED",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "error_embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "error_embed",
+        "message": "Incorrect usage of command.\n\n`>SetLogs #Channel`",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "error_embed",
+        "message": "BOT CREATED BY: HueByte | Chris - Copyrighted 2025",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "error_embed",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "1",
+        "varName3": "error_embed_delete",
+        "name": "Send Embed Message"
+      },
+      {
+        "time": "5",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "error_embed_delete",
+        "reason": "",
+        "name": "Delete Message"
+      },
+      {
+        "storage": "0",
+        "varName": "error_embed_delete",
+        "reason": "",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "SUCCESS MESSAGE",
+        "color": "#00ff40",
+        "name": "Comment"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "Logs",
+        "changeType": "0",
+        "value": "1",
+        "name": "Control Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "LogChannel",
+        "changeType": "0",
+        "value": "tempVars(\"Channel_ID\")",
+        "name": "Control Server Data"
+      },
+      {
+        "title": "SUCCESS",
+        "author": "",
+        "color": "GREEN",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "success_embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "success_embed",
+        "message": "Successfully set ${mentionedChannel} as the log channel!",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "success_embed",
+        "message": "BOT CREATED BY: HueByte | Chris - Copyrighted 2025",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "success_embed",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "1",
+        "varName3": "success_embed_delete",
+        "name": "Send Embed Message"
+      },
+      {
+        "time": "5",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "success_embed_delete",
+        "reason": "",
+        "name": "Delete Message"
+      },
+      {
+        "storage": "0",
+        "varName": "success_embed_delete",
+        "reason": "",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ]
   }
 ]
