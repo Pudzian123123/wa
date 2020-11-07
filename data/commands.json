@@ -1481,7 +1481,7 @@
       },
       {
         "channel": "0",
-        "count": "${tempVars(\"verify\")}",
+        "count": "verify",
         "condition": "0",
         "custom": "",
         "varName": "",
