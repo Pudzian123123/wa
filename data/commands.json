@@ -1480,87 +1480,12 @@
         "name": "Add Member Role"
       },
       {
-        "title": "VERIFIED",
-        "author": "",
-        "color": "#00ff1a",
-        "url": "https://imcoolbrogg.wixsite.com/bots",
-        "authorIcon": "",
-        "authorUrl": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "timestamp": "false",
-        "debug": "false",
-        "text": "",
-        "year": "",
-        "month": "",
-        "day": "",
-        "hour": "",
-        "minute": "",
-        "second": "",
-        "storage": "1",
-        "varName": "Embed message",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "Embed message",
-        "message": "Zostałeś zweryfikowany ${member}!",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "Embed message",
         "channel": "0",
-        "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "messageContent": "",
-        "name": "Send Embed Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "title": "ERROR",
-        "author": "",
-        "color": "#ff0004",
-        "url": "https://imcoolbrogg.wixsite.com/bots",
-        "authorIcon": "",
-        "authorUrl": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "timestamp": "false",
-        "debug": "false",
-        "text": "",
-        "year": "",
-        "month": "",
-        "day": "",
-        "hour": "",
-        "minute": "",
-        "second": "",
-        "storage": "1",
-        "varName": "Embed 2",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "Embed 2",
-        "message": "Jesteś już zweryfikowany, jeśli to błąd, skontaktuj się z pomocą techniczną .",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "Embed 2",
-        "channel": "0",
-        "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "messageContent": "",
-        "name": "Send Embed Message"
+        "count": "${tempVars(\"verify\")}",
+        "condition": "0",
+        "custom": "",
+        "varName": "",
+        "name": "Delete Bulk Messages"
       }
     ]
   },
