@@ -1478,14 +1478,6 @@
         "role": "3",
         "varName": "Role",
         "name": "Add Member Role"
-      },
-      {
-        "channel": "0",
-        "count": "verify",
-        "condition": "0",
-        "custom": "",
-        "varName": "",
-        "name": "Delete Bulk Messages"
       }
     ]
   },

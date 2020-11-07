@@ -1,689 +1,87 @@
 [
   null,
   {
-    "name": "Join",
-    "temp": "user",
-    "event-type": "6",
-    "actions": [
-      {
-        "channel": "4",
-        "varName": "",
-        "message": "**Witaj** ${tempVars(\"user\")} !!!",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "Leave",
-    "temp": "user",
-    "event-type": "7",
-    "actions": [
-      {
-        "channel": "4",
-        "varName": "",
-        "message": "${tempVars(\"user\")} nas nie lubi ;(",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "UserJoin",
-    "temp": "gracz",
-    "event-type": "6",
-    "_id": "rbHCz",
-    "actions": [
-      {
-        "info": "0",
-        "find": "771113768028471296",
-        "storage": "1",
-        "varName": "kanał",
-        "name": "Find Channel"
-      },
-      {
-        "member": "2",
-        "varName": "gracz",
-        "info": "16",
-        "storage": "1",
-        "varName2": "awatar",
-        "name": "Store Member Info"
-      },
-      {
-        "title": "Witaj!",
-        "author": "",
-        "color": "#19becc",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "${tempVars(\"awatar\")}",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "witaj",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "witaj",
-        "message": "Hej **${tempVars(\"gracz\")}**!",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "witaj",
-        "channel": "5",
-        "varName2": "kanał",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "Welcome",
-    "temp": "member-joined",
-    "event-type": "6",
-    "_id": "GPPJC",
-    "actions": [
-      {
-        "info": "2",
-        "find": "Wel !",
-        "storage": "1",
-        "varName": "topic-channel",
-        "name": "Find Channel"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "36",
-        "storage": "1",
-        "varName2": "member-count",
-        "name": "Store Server Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "server-name",
-        "name": "Store Server Info"
-      },
-      {
-        "member": "2",
-        "varName": "member-joined",
-        "info": "2",
-        "storage": "1",
-        "varName2": "member-name",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "2",
-        "varName": "member-joined",
-        "info": "21",
-        "storage": "1",
-        "varName2": "member-creation",
-        "name": "Store Member Info"
-      },
-      {
-        "title": "",
-        "author": "",
-        "color": "00E4FF",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "mbed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Welcome :hibiscus:",
-        "message": "Welcome **${tempVars(\"member-name\")}** To **${tempVars(\"server-name\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Family :sparkling_heart:",
-        "message": "Member #**${tempVars(\"member-count\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Account Creation Date :ringed_planet:",
-        "message": "**${tempVars(\"member-creation\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "message": "Created By El#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "channel": "5",
-        "varName2": "topic-channel",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "Leave",
-    "temp": "member-left",
-    "event-type": "7",
-    "_id": "DQaEE",
-    "actions": [
-      {
-        "info": "2",
-        "find": "Bye !",
-        "storage": "1",
-        "varName": "server-topic",
-        "name": "Find Channel"
-      },
-      {
-        "member": "2",
-        "varName": "member-left",
-        "info": "2",
-        "storage": "1",
-        "varName2": "left-name",
-        "name": "Store Member Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "36",
-        "storage": "1",
-        "varName2": "server-members",
-        "name": "Store Server Info"
-      },
-      {
-        "title": "Member Left The Server",
-        "author": "",
-        "color": "FF0000",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "mbedd",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "mbedd",
-        "message": "**${tempVars(\"left-name\")}** Just Left The Server \nWe Are Left With **${tempVars(\"server-members\")}** Members",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "mbedd",
-        "message": "Created By El#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "mbedd",
-        "channel": "5",
-        "varName2": "server-topic",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "Welcome",
-    "temp": "member-joined",
-    "event-type": "6",
-    "_id": "GPPJC",
-    "actions": [
-      {
-        "info": "2",
-        "find": "Wel !",
-        "storage": "1",
-        "varName": "topic-channel",
-        "name": "Find Channel"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "36",
-        "storage": "1",
-        "varName2": "member-count",
-        "name": "Store Server Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "server-name",
-        "name": "Store Server Info"
-      },
-      {
-        "member": "2",
-        "varName": "member-joined",
-        "info": "2",
-        "storage": "1",
-        "varName2": "member-name",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "2",
-        "varName": "member-joined",
-        "info": "21",
-        "storage": "1",
-        "varName2": "member-creation",
-        "name": "Store Member Info"
-      },
-      {
-        "title": "",
-        "author": "",
-        "color": "00E4FF",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "mbed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Welcome :hibiscus:",
-        "message": "Welcome **${tempVars(\"member-name\")}** To **${tempVars(\"server-name\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Family :sparkling_heart:",
-        "message": "Member #**${tempVars(\"member-count\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "fieldName": "Account Creation Date :ringed_planet:",
-        "message": "**${tempVars(\"member-creation\")}**",
-        "inline": "1",
-        "name": "Add Embed Field"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "message": "Created By El#1004",
-        "footerIcon": "https://cdn.discordapp.com/avatars/696300065571995688/0ee66eded8cdc0ac0f686adb5ca24ffa.png",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "mbed",
-        "channel": "5",
-        "varName2": "topic-channel",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "Anti Raid Release",
-    "temp": "member",
-    "event-type": "6",
-    "_id": "ioPVo",
-    "actions": [
-      {
-        "member": "2",
-        "varName": "member",
-        "info": "1",
-        "storage": "1",
-        "varName2": "user",
-        "name": "Store Member Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "11",
-        "storage": "1",
-        "varName2": "owner",
-        "name": "Store Server Info"
-      },
-      {
-        "member": "2",
-        "varName": "owner",
-        "info": "22",
-        "storage": "1",
-        "varName2": "ownertag",
-        "name": "Store Member Info"
-      },
-      {
-        "behavior": "0",
-        "interpretation": "0",
-        "code": "const ms = require('ms')\nconst member = tempVars(\"user\")\n\nms(Date.now()-client.users.get(member).createdTimestamp, {long:true})",
-        "storage": "1",
-        "varName": "outputcheck",
-        "name": "Run Script"
-      },
-      {
-        "storage": "1",
-        "varName": "outputcheck",
-        "comparison": "5",
-        "value": "\"seconds\"",
-        "iftrue": "2",
-        "iftrueVal": "10",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Variable"
-      },
-      {
-        "storage": "1",
-        "varName": "outputcheck",
-        "comparison": "5",
-        "value": "\"minutes\"",
-        "iftrue": "2",
-        "iftrueVal": "10",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Variable"
-      },
-      {
-        "storage": "1",
-        "varName": "outputcheck",
-        "comparison": "5",
-        "value": "\"hours\"",
-        "iftrue": "2",
-        "iftrueVal": "10",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Variable"
-      },
-      {
-        "behavior": "0",
-        "interpretation": "0",
-        "code": "var output = tempVars(\"outputcheck\")\nvar check = parseInt(output.replace(\"days\", \"\"));\n\ncheck <= 14;",
-        "storage": "1",
-        "varName": "tocheck",
-        "name": "Run Script"
-      },
-      {
-        "storage": "1",
-        "varName": "tocheck",
-        "comparison": "2",
-        "value": "true",
-        "iftrue": "0",
-        "iftrueVal": "",
-        "iffalse": "1",
-        "iffalseVal": "",
-        "name": "Check Variable"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "info": "0",
-        "varName2": "",
-        "iftrue": "2",
-        "iftrueVal": "17",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check If Member"
-      },
-      {
-        "channel": "5",
-        "varName": "member",
-        "message": "You were banned by an automated system due to having an account younger then 14 days, if you wish to be unbanned please contact **${tempVars(\"ownertag\")}**. Have a nice day 😃 ",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "info": "22",
-        "storage": "1",
-        "varName2": "membertag",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "info": "2",
-        "storage": "1",
-        "varName2": "username",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "info": "16",
-        "storage": "1",
-        "varName2": "avatar",
-        "name": "Store Member Info"
-      },
-      {
-        "info": "0",
-        "find": "772801422529789974",
-        "storage": "1",
-        "varName": "logs",
-        "name": "Find Channel"
-      },
-      {
-        "behavior": "0",
-        "interpretation": "0",
-        "code": "const { RichEmbed } = require('discord.js')\nconst em = new RichEmbed()\n.setColor(\"#ff0000\")\n.setTitle(\"Logged\")\n.setAuthor(`${tempVars(\"username\")}`, `${tempVars(\"avatar\")}`)\n.setDescription(`The automated anti raid system banned a user \\n \\n User: \\n **${tempVars(\"membertag\")}** \\n \\n Account was **${tempVars(\"outputcheck\")}** old`);\ntempVars(\"logs\").send(em);",
-        "storage": "0",
-        "varName": "",
-        "name": "Run Script"
-      },
-      {
-        "member": "2",
-        "varName": "member",
-        "reason": "",
-        "name": "Ban Member"
-      },
-      {
-        "info": "0",
-        "find": "772801422529789974",
-        "storage": "1",
-        "varName": "logs",
-        "name": "Find Channel"
-      },
-      {
-        "channel": "5",
-        "varName": "logs",
-        "message": "The system banned a bot that was ${tempVars(\"outputcheck\")} old, because it was a bot there were no proper logs",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ]
-  },
-  {
-    "name": "JOIN",
-    "temp": "NEW-MEMBER",
-    "event-type": "6",
-    "_id": "aCMtj",
-    "actions": [
-      {
-        "server": "0",
-        "varName": "",
-        "info": "35",
-        "storage": "1",
-        "varName2": "count",
-        "name": "Store Server Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "5",
-        "storage": "1",
-        "varName2": "icon",
-        "name": "Store Server Info"
-      },
-      {
-        "member": "2",
-        "varName": "NEW-MEMBER",
-        "info": "2",
-        "storage": "1",
-        "varName2": "username",
-        "name": "Store Member Info"
-      },
-      {
-        "comment": "CHANNEL NAME There",
-        "color": "#60ff00",
-        "name": "Comment"
-      },
-      {
-        "info": "1",
-        "find": "👋-powitania",
-        "storage": "1",
-        "varName": "dsl",
-        "name": "Find Channel"
-      },
-      {
-        "comment": "CHANNEL NAME There",
-        "color": "#60ff00",
-        "name": "Comment"
-      },
-      {
-        "title": "Welcome!",
-        "author": "",
-        "color": "00AAFF",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "${tempVars(\"icon\")}",
-        "storage": "1",
-        "varName": "embed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "message": "${tempVars(\"NEW-MEMBER\")} **you are our** ${tempVars(\"count\")} **member on server!\nHope you have a good time on this Discord!**",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "message": "💬",
-        "footerIcon": "",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "channel": "5",
-        "varName2": "dsl",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  },
-  {
-    "name": "Leave",
-    "temp": "last-MEMBER",
-    "event-type": "0",
-    "_id": "cYFGn",
-    "actions": [
-      {
-        "server": "0",
-        "varName": "",
-        "info": "35",
-        "storage": "1",
-        "varName2": "count",
-        "name": "Store Server Info"
-      },
-      {
-        "server": "0",
-        "varName": "",
-        "info": "5",
-        "storage": "1",
-        "varName2": "icon",
-        "name": "Store Server Info"
-      },
-      {
-        "member": "2",
-        "varName": "NEW-MEMBER",
-        "info": "2",
-        "storage": "1",
-        "varName2": "username",
-        "name": "Store Member Info"
-      },
-      {
-        "comment": "Channel name THERe",
-        "color": "#0dff00",
-        "name": "Comment"
-      },
-      {
-        "info": "1",
-        "find": "👋-pożegnania",
-        "storage": "1",
-        "varName": "dsl",
-        "name": "Find Channel"
-      },
-      {
-        "comment": "Channel name THERe",
-        "color": "#0dff00",
-        "name": "Comment"
-      },
-      {
-        "title": "Good-Bye!",
-        "author": "",
-        "color": "ff2a00",
-        "timestamp": "true",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "${tempVars(\"icon\")}",
-        "storage": "1",
-        "varName": "embed",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "message": "${tempVars(\"last-MEMBER\")} left, we are now **${tempVars(\"count\")}** member on server.",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "message": "💬",
-        "footerIcon": "",
-        "name": "Set Embed Footer"
-      },
-      {
-        "storage": "1",
-        "varName": "embed",
-        "channel": "4",
-        "varName2": "",
-        "storage3": "0",
-        "varName3": "",
-        "name": "Send Embed Message"
-      }
-    ]
-  }
+  "name": "JOIN",
+  "temp": "NEW-MEMBER",
+  "event-type": "6",
+  "_id": "aCMtj",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "35",
+      "storage": "1",
+      "varName2": "count",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "icon",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "2",
+      "varName": "NEW-MEMBER",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "comment": "CHANNEL NAME There",
+      "color": "#60ff00",
+      "name": "Comment"
+    },
+    {
+      "info": "1",
+      "find": "komendy",
+      "storage": "1",
+      "varName": "dsl",
+      "name": "Find Channel"
+    },
+    {
+      "comment": "CHANNEL NAME There",
+      "color": "#60ff00",
+      "name": "Comment"
+    },
+    {
+      "title": "Welcome!",
+      "author": "",
+      "color": "00AAFF",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"icon\")}",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"NEW-MEMBER\")} **you are our** ${tempVars(\"count\")} **member on server!\nHope you have a good time on this Discord!**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "💬",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "dsl",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
 ]
