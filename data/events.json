@@ -14,5 +14,108 @@
         "name": "Send Message"
       }
     ]
+  },
+  {
+    "name": "AntiInvite",
+    "temp": "message",
+    "event-type": "2",
+    "_id": "GvesV",
+    "actions": [
+      {
+        "info": "0",
+        "find": "748147690134700175",
+        "storage": "1",
+        "varName": "id kanalu",
+        "name": "Find Channel"
+      },
+      {
+        "message": "1",
+        "varName": "message",
+        "info": "4",
+        "storage": "1",
+        "varName2": "kanal zaproszenia",
+        "name": "Store Message Info"
+      },
+      {
+        "storage": "1",
+        "varName": "kanal zaproszenia",
+        "comparison": "1",
+        "value": "tempVars(\"id kanalu\")",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "1",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "message": "1",
+        "varName": "message",
+        "info": "2",
+        "storage": "1",
+        "varName2": "txt",
+        "name": "Store Message Info"
+      },
+      {
+        "storage": "1",
+        "varName": "txt",
+        "comparison": "5",
+        "value": "discord.gg",
+        "iftrue": "3",
+        "iftrueVal": "1",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "txt",
+        "comparison": "5",
+        "value": "discordapp.com/invite",
+        "iftrue": "0",
+        "iftrueVal": "1",
+        "iffalse": "1",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "message": "1",
+        "varName": "message",
+        "info": "3",
+        "storage": "1",
+        "varName2": "author",
+        "name": "Store Message Info"
+      },
+      {
+        "message": "1",
+        "varName": "message",
+        "info": "4",
+        "storage": "1",
+        "varName2": "channel",
+        "name": "Store Message Info"
+      },
+      {
+        "member": "2",
+        "varName": "author",
+        "permission": "ADMINISTRATOR",
+        "iftrue": "1",
+        "iftrueVal": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Member Permissions"
+      },
+      {
+        "storage": "1",
+        "varName": "message",
+        "name": "Delete Message"
+      },
+      {
+        "channel": "5",
+        "varName": "channel",
+        "message": "⛔ **Nie reklamuj sie typie ${tempVars(\"author\")}!** ⛔",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ]
   }
 ]
