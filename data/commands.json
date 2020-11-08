@@ -1995,5 +1995,489 @@
       }
     ],
     "_id": "SBtbh"
-  }
+  },
+  {
+  "name": "ship",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "poLKa",
+  "actions": [
+    {
+      "title": "",
+      "author": "",
+      "color": "#ff99ff",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "username",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "min": "0",
+      "max": "100",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "11",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** █:black_medium_small_square::black_medium_small_square::black_medium_small_square::black_medium_small_square::black_medium_small_square: Koszmarnie 😭",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "21",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** █:black_medium_small_square::black_medium_small_square::black_medium_small_square::black_medium_small_square::black_medium_small_square: Slabo 😢",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "31",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ██:black_medium_small_square::black_medium_small_square::black_medium_small_square::black_medium_small_square: Tak sobie 😦",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "41",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ███:black_medium_small_square::black_medium_small_square::black_medium_small_square::black_medium_small_square: Przecietnie 😕",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "51",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ████:black_medium_small_square::black_medium_small_square::black_medium_small_square: Srednio 😐",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "61",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** █████:black_medium_small_square::black_medium_small_square::black_medium_small_square: Moze byc lepiej 😶",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "71",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ██████:black_medium_small_square::black_medium_small_square: Nie jest zle 🙂",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "81",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ███████:black_medium_small_square::black_medium_small_square: Dobrze 😄",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "91",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ████████:black_medium_small_square: Bardzo dobrze 😃",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "3",
+      "value": "100",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ██████████ Niesamowicie 😍",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "1",
+      "value": "100",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"number\")}%** ██████████ PRAWDZIWA MILOSC ❣",
+      "name": "Set Embed Description"
+    },
+    {
+      "call": "40",
+      "name": "Jump to Action"
+    },
+    {
+      "comment": "abc",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "comment": "abc",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "comment": "abc",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "55",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "4",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "item",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "call": "52",
+      "name": "Jump to Action"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "62",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "member1",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "2",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "member2",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "2",
+      "varName": "member1",
+      "info": "3",
+      "storage": "1",
+      "varName2": "username1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member2",
+      "info": "3",
+      "storage": "1",
+      "varName2": "username2",
+      "name": "Store Member Info"
+    },
+    {
+      "call": "59",
+      "name": "Jump to Action"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":heartpulse: **Sprawdzanie** :heartpulse:\n:small_red_triangle_down: `${tempVars(\"username\")}`\n:small_red_triangle: `${tempVars(\"item\")}`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":heartpulse: **SPRAWDZANIE** :heartpulse:\n:small_red_triangle_down: _`${member.displayName}`_\n:small_red_triangle: _`${tempVars(\"username\")}`_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":heartpulse: **SPRAWDZANIE** :heartpulse:\n:small_red_triangle_down: _`${tempVars(\"username2\")}`_\n:small_red_triangle: _`${tempVars(\"username1\")}`_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "item2",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":heartpulse: **SPRAWDZANIE** :heartpulse:\n:small_red_triangle_down: _`${tempVars(\"username\")}`_\n:small_red_triangle: _`${tempVars(\"item2\")}`_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0"
+}
 ]
