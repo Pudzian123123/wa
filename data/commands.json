@@ -2181,100 +2181,85 @@
     ]
   },
   {
-  "name": "ticket",
-  "permissions": "MANAGE_MESSAGES",
-  "restriction": "1",
-  "actions": [
-    {
-      "info": "0",
-      "find": "748349761878360205",
-      "storage": "1",
-      "varName": "channelid",
-      "name": "Find Channel"
-    },
-    {
-      "member": "1",
-      "varName": "",
-      "info": "2",
-      "storage": "1",
-      "varName2": "namemember",
-      "name": "Store Member Info"
-    },
-    {
-      "member": "1",
-      "varName": "",
-      "info": "1",
-      "storage": "1",
-      "varName2": "idmember",
-      "name": "Store Member Info"
-    },
-    {
-      "info": "1",
-      "infoIndex": "1",
-      "storage": "1",
-      "varName": "myMsg",
-      "name": "Store Command Params"
-    },
-    {
-      "storage": "0",
-      "varName": "",
-      "name": "Delete Message"
-    },
-    {
-      "title": "Nowe zgłoszenie ",
-      "author": "",
-      "color": "RED",
-      "url": "",
-      "authorIcon": "",
-      "authorUrl": "",
-      "imageUrl": "",
-      "thumbUrl": "",
-      "timestamp": "false",
-      "text": "",
-      "year": "",
-      "month": "",
-      "day": "",
-      "hour": "",
-      "minute": "",
-      "second": "",
-      "storage": "1",
-      "varName": "wiadomosc",
-      "name": "Create Embed Message"
-    },
-    {
-      "storage": "1",
-      "varName": "wiadomosc",
-      "fieldName": "▪ Treść:",
-      "message": "${tempVars(\"myMsg\")} ",
-      "inline": "1",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "wiadomosc",
-      "fieldName": "▪ Id zgłaszającego ",
-      "message": "${tempVars(\"idmember\")}",
-      "inline": "1",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "wiadomosc",
-      "fieldName": "▪ Nazwa użytkownika ",
-      "message": "${tempVars(\"namemember\")}",
-      "inline": "1",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "wiadomosc",
-      "channel": "5",
-      "varName2": "channelid",
-      "storage3": "0",
-      "varName3": "",
-      "name": "Send Embed Message"
-    }
-  ],
-  "_id": "lrwTC"
-}
+    "name": "ustawosoby",
+    "permissions": "NONE",
+    "restriction": "2",
+    "_id": "hhPYy",
+    "actions": [
+      {
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "2",
+        "varName": "id",
+        "name": "Store Command Params"
+      },
+      {
+        "storage": "2",
+        "varName": "id",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "✅ Zmieniono id kanalu z iloscia osob na `${serverVars(\"id\")}`!",
+        "storage": "1",
+        "varName2": "savesuccesful",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "time": "3",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "savesuccesful",
+        "name": "Delete Message"
+      },
+      {
+        "storage": "0",
+        "varName": "",
+        "name": "Delete Message"
+      }
+    ]
+  },
+  {
+    "name": "setjoinrole",
+    "permissions": "ADMINISTRATOR",
+    "restriction": "1",
+    "_id": "XqmHa",
+    "actions": [
+      {
+        "info": "3",
+        "infoIndex": "1",
+        "storage": "2",
+        "varName": "role",
+        "name": "Store Command Params"
+      },
+      {
+        "title": "Set role: ${serverVars(\"role\")}",
+        "author": "",
+        "color": "",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ]
+  }
 ]

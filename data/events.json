@@ -117,5 +117,51 @@
         "name": "Send Message"
       }
     ]
+  },
+  {
+    "name": "zmiana kanalu z osobami",
+    "temp": "20",
+    "event-type": "3",
+    "_id": "vQEHa",
+    "actions": [
+      {
+        "info": "0",
+        "find": "${serverVars(\"id\")}",
+        "storage": "1",
+        "varName": "kanal",
+        "name": "Find Voice Channel"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "36",
+        "storage": "1",
+        "varName2": "osoby",
+        "name": "Store Server Info"
+      },
+      {
+        "storage": "3",
+        "varName": "kanal",
+        "channelType": "1",
+        "toChange": "0",
+        "newState": "👤► ${tempVars(\"osoby\")}",
+        "name": "Edit Channel"
+      }
+    ]
+  },
+  {
+    "name": "JoinRole",
+    "temp": "user",
+    "event-type": "6",
+    "_id": "diPFk",
+    "actions": [
+      {
+        "member": "2",
+        "varName2": "${tempVars(\"user\")}",
+        "role": "4",
+        "varName": "role",
+        "name": "Add Member Role"
+      }
+    ]
   }
 ]
